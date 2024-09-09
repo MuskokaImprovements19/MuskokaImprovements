@@ -633,8 +633,7 @@
                     </center>
                 </div>
             </div>
-        </div>
-
+	    
         <div id="service1" class="section-twomain">
             <div class="heading">
                 <h2>Our Construction Services</h2>
@@ -784,7 +783,6 @@
             <h2>Careers</h2>
             <center> <p>At Muskoka Improvements we are actively seeking individuals with construction and property management skills and experience to join our team. Reach out to us today at <a href="mailto:work@muskokaimprovements.com">work@muskokaimprovements.com</a> for more information!</p></center>
         </div>
-
     </div>
 
     <div id="footer" class="footer">
