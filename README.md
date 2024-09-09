@@ -633,7 +633,7 @@
                     </center>
                 </div>
             </div>
-	    
+	 </div>   
         <div id="service1" class="section-twomain">
             <div class="heading">
                 <h2>Our Construction Services</h2>
