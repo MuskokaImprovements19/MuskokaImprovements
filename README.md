@@ -803,6 +803,7 @@
                     <img src="mail.png" alt="Mail Symbol">
                     <p><a href="mailto:work@muskokaimprovements.com">work@muskokaimprovements.com</a></p>
                 </div>
+		</div>
             <img src="muskokalogo.png" width="400" height="400" alt="Muskoka Logo">
         </div>
 	</div>
