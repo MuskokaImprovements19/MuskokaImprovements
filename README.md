@@ -1,1 +1,948 @@
-# MuskokaImprovements
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Muskoka Improvements - Construction, Property Management, and Waste Disposal Services">
+    <title>Muskoka Improvements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .header {
+            background-image: url('background11.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: local;
+            background-position: center;
+            padding: 280px;
+            text-align: center;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+            z-index: 999;
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #d8570d;
+        }
+        .navbar img {
+            margin: 0 10px;
+        }
+
+        .lightwidget-widget, .lightwidget-overlay {
+            z-index: 1001 !important;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            flex: 1;
+        }
+
+        .section-main, .section-twomain, .section-threemain, .section-fourmain, .section-fivemain, .section-sixmain, .section-sevenmain, .section-eightmain {
+            display: none;
+        }
+        .section-main.active, .section-twomain.active, .section-threemain.active, .section-fourmain.active, .section-fivemain.active, .section-sixmain.active, .section-sevenmain.active, .section-eightmain.active {
+            display: block;
+        }
+        .footer {
+            background-color: grey;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .footer-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .instagram-footer, .phone-footer, .mail-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .instagram-footer img, .phone-footer img, .mail-footer img {
+            margin-right: 10px;
+        }
+
+        .instagram-footer img, .phone-footer img, .mail-footer img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .instagram-footer a, .phone-footer a, .mail-footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .instagram-footer a:hover, .phone-footer a:hover, .mail-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .phone-footer p, .mail-footer p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        /* Make images responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .section-fourmain img {
+            max-width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-fourmain p {
+            margin: 0;
+        }
+
+        .pickup-details {
+            border: 2px solid #d8570d;
+            padding: 10px;
+            background-color: #d8570d;
+            margin-bottom: 20px;
+            margin-right: 370px;
+            margin-left: 370px;
+        }
+
+        .bins img, .bottle img {
+            float: left;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .bins p,.bottle p {
+            color: white;
+        }
+
+        .real-estate-footer, .footer-content {
+            margin: 0;
+            padding: 5px 0;
+            line-height: 1.5;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .real-estate-footer p {
+            text-align: center;
+            margin-right: 100px;
+        }
+
+        .real-estate-footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .real-estate-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .real-estate-footer-heading {
+            text-align: center;
+            margin-right: 500px;
+            margin-bottom: 0px;
+        }
+
+        .real-estate-header img {
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            margin-right: 100px;
+            width: 250px; 
+            height: 300px;
+        }
+        .real-estate-header p {
+            line-height:1.5;
+        }
+
+        .section-sevenmain p {
+            text-align: center;
+        }
+
+        .section-sevenmain a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .section-sevenmain a:hover {
+            color: #d8570d;
+        }
+
+        /* Property Management Layout */
+        .property-management-content {
+            display: flex;
+        }
+
+        .property-management-text {
+            flex: 1;
+	    margin-top: 40px;
+            margin-right: 40px;
+	    line-height: 1.5;
+        }
+
+        .property-management-images {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+
+        .property-management-images img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .property-management-images img:first-child {
+            grid-column: span 2;
+        }
+
+        /* New background styling for the first paragraph */
+        .highlighted-paragraph {
+            background-color: #d8570d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            box-sizing: border-box;
+	    margin-top: -50px
+        }
+	.highlighted-paragraph p {
+	    margin-right: 20px;
+	    margin-left: 20px;
+	}
+
+        /* Stone Background for Home Section */
+        .stone-background {
+            background-image: url('stonebackground.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 150px 0;
+            text-align: center;
+            color: white;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            position: relative;
+            left: 0;
+            top: -40px;
+            overflow-x: hidden;
+        }
+
+	.green-background {
+	    position: relative;
+	    background-image: url('green.png');
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    padding: 200px 0;
+	    text-align: center;
+	    color: white;
+	    width: 100vw;
+	    margin-left: calc(-50vw + 50%);
+	    position: relative;
+	    left: 0;
+	    top: -40px;
+	    overflow-x: hidden;
+	}
+	
+	.green-background::before {
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0, 0, 0, 0.5);
+	    z-index: 1;
+	}
+
+	.green-background h2 {
+	    position: relative;
+	    z-index: 2;
+	}
+
+        /* Updated styles for black background section */
+        .founded-text {
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin: 0 auto;
+            padding: 50px 60px;
+            max-width: 100%;
+            position: relative;
+            top: -40px;
+            margin-left: calc(-50vw + 50%);
+            left: 0;
+            right: 0;
+            width: 2000vw;
+        }
+
+        /* Flexbox Layout for "Our Mission" Section */
+        .mission-section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .mission-text {
+            display: flex;
+            align-items: flex-start;
+            flex: 2;
+            margin-left: -60px;
+            margin-right: 20px;
+        }
+
+        .mission-text h2 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .bullet-icon {
+            margin-right: 30px;
+            height: 75px;
+            width: 100px;
+            align-self: flex-start;
+            margin-top: 60px;
+            margin-left: 0;
+        }
+
+        .mission-text p {
+            text-align: left;
+            margin: 0;
+        }
+
+        .mission-video {
+            flex: 1;
+        }
+
+        /* Centered Text Layout for "Our Expertise" Section */
+        .expertise-section {
+            margin: 40px auto;
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        /* Flexbox Layout for Construction and Property Management */
+        .expertise-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .expertise-content > div {
+            flex: 1;
+            padding: 10px;
+            background-color: #d8570d;
+            color: white;
+            border: 2px solid #d8570d;
+        }
+
+        .expertise-content > div h3 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .expertise-content > div img {
+            margin-top: 20px;
+        }
+
+        .expertise-content > div .gap-between-images {
+            margin-left: 5px;
+        }
+
+        .heading {
+            text-align: center;
+        }
+
+        .construction-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .left-paragraph {
+            flex: 2;
+            text-align: justify;
+            margin-left: 50px;
+            margin-right: 120px;
+	        line-height: 1.4;
+        }
+
+        .image-container {
+            flex: 1;
+	        text-align: right;
+    	    transform: translateX(-100px);
+        }
+
+        .image-container img {
+            width: 100%;
+	        margin-left: -40px;
+        }
+
+        /* Black banner for the right paragraph */
+        .right-paragraph {
+	    background-color: black;
+	    color: white;
+	    text-align: center;
+	    margin: 0 auto;
+	    padding: 50px 0;
+	    width: 100vw;
+	    position: relative;
+	    left: calc(-50vw + 50%);
+	    right: calc(-50vw + 50%);
+	    box-sizing: border-box;
+	}
+
+        /* Container for the bullet points and images */
+        .centered-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0;
+            padding: 30px;
+            background-color: transparent;
+            color: black;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+	        margin-bottom: calc(-50vw + 50%);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .centered-content img {
+            width: 250px;
+            height: auto;
+            margin: 0 20px;
+        }
+
+        .bullet-point-list {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex: 1;
+        }
+
+        .bullet-point-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .left-images-container {
+            display: grid;
+	    background-color: #d8570d;
+            padding: 15px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            width: 450px;
+	    margin-right: 125px;
+	    margin-left: 75px;
+        }
+	.right-images-container {
+	    display: grid;
+	    background-color: #d8570d;
+            padding: 15px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            width: 450px;
+	    margin-right: 75px;
+	    margin-left: 125px;
+
+	}
+	    .left-images-container img, .right-images-container img{
+	     margin-left: -1px;
+	     height: 200px
+	    }
+	
+        .headingconstruction { 
+	    background-color: white;
+            color: black;
+            width: 100vw;
+            padding: 20px 0;
+            text-align: center;
+            margin-left: calc(-50vw + 50%);
+            box-sizing: border-box;
+            position: relative;
+	    }
+	.property-management-item {
+	    display: flex;
+	    justify-content: space-between;
+            align-items: center;
+	    margin: 40px 0;
+	}
+
+        .property-management-item2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+            padding: 50px 0;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            box-sizing: border-box;	
+	        margin-left: 50px;
+        }
+
+	    .black-background {
+	        background-color: black;
+	        color: white;
+	        padding: 40px;
+	        width: 100vw;
+	        margin-left: calc(-50vw + 50%);
+	        box-sizing: border-box;
+	        position: relative;
+	        margin-bottom: -40px;
+	        min-height: calc(100vh - 100px);
+		margin-top: 10px;
+	    }
+
+	    .bullet-container {
+	        display: flex;
+	        align-items: center;
+	        justify-content: center;
+	        gap: 50px;
+	    }
+
+	    .bullet-text {
+	        flex: 1;
+	    }
+
+	    .image-left2, .image-right2 {
+	        flex: 1;
+	    }
+
+	    .image-left2 img, .image-right2 img {
+	        width: 600px;
+	        height: 400px;
+	    }
+
+        /* Responsive Design for Laptop and Tablet */
+        @media (max-width: 1200px) {
+            .content {
+                margin: 10px;
+            }
+
+            .expertise-content {
+                flex-direction: column;
+            }
+
+            .expertise-content > div {
+                margin-bottom: 20px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                padding: 10px 0;
+                width: 100%;
+            }
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .header {
+                padding: 150px 20px;
+            }
+
+            .navbar img {
+                width: 120px;
+                height: auto;
+            }
+
+            .property-management-content {
+                flex-direction: column;
+            }
+
+            .property-management-images img {
+                width: 100%;
+                height: auto;
+            }
+
+            .pickup-details {
+                margin: 0 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .expertise-content {
+                flex-direction: column;
+            }
+
+            .left-paragraph {
+                margin: 0 20px;
+                text-align: justify;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="navbar">
+        <a href="#home" onclick="navigateTo('home')">Home</a>
+        <a href="#projects" onclick="navigateTo('projects')">Projects</a>
+        <a href="#service1" onclick="navigateTo('service1')">General Contracting</a>
+        <a href="#service3" onclick="navigateTo('service3')">Weekly Garbage</a>        
+        <img src="muskokalogo.png" alt="Muskoka Logo" width="175" height="120">
+        <a href="#service2" onclick="navigateTo('service2')">Property Management</a>
+        <a href="#real-estate" onclick="navigateTo('real-estate')">Real Estate</a>
+        <a href="#careers" onclick="navigateTo('careers')">Careers</a>
+        <a href="#contact" onclick="scrollToBottom()">Contact</a>
+    </div>
+
+    <div class="content">
+<div id="home" class="section-main">
+            <div class="stone-background">
+                <h1><br />About Us</h1>
+            </div>
+
+            <div class="founded-text">
+                <p>Founded in 2019, Muskoka Improvements has established itself as a leading provider of comprehensive services designed to meet the needs of property owners in the Muskoka region. At Muskoka Improvements, we specialize in construction and property management services, all designed and delivered to the unique needs to property owners.</p>
+            </div>
+
+            <div class="mission-section">
+                <div class="mission-text">
+                    <img src="bullet.png" alt="Bullet" class="bullet-icon">
+                    <div>
+                        <h2>Our Mission</h2>
+                        <p>At Muskoka Improvements, our mission is simple yet profound: to simplify and enhance the Muskoka living experience. We recognize that owning a property comes with its own set of joys and challenges, and our goal is to make every aspect as seamless as possible. Whether you are building your dream getaway or looking to have your property looking pristine year-round, we are here to support you every step of the way, ensuring that your property is something you can take pride in.</p>
+                    </div>
+                </div>
+                <div class="mission-video">
+                    <video id="home-video" width="500" height="300" controls>
+                        <source src="Norms.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="expertise-section">
+                <h2>Our Expertise</h2>
+                <p>Our services are backed by a team of professionals who bring years of experience and a commitment to excellence to every project. From construction and renovation to ongoing property management, we take pride in delivering high-quality, reliable, and efficient services that exceed expectations.</p>
+            </div>
+
+            <div class="expertise-content">
+                <div class="construction">
+                   <center><h3>Construction</h3></center>
+                    <p>Our team’s dedication to craftsmanship ensures that every aspect of your project is executed with precision and care from initial concept to successful completion, reflecting the natural beauty and charm of Muskoka in every detail.</p>
+                    <center><img src="Bedroom.png" alt="Bedroom" width="290" height="200"><img src="bathroom.png" width="215" height="200"></center>
+                </div>
+
+         <div class="property-management">
+            <center> <h3>Property Management</h3> </center>
+                    <p>Our expertise includes a variety of comprehensive property management services, meaning we will handle any project big or small to ensure that your property remains pristine and well-maintained throughout the year to allow you to relax and enjoy Muskoka’s tranquility.</p>
+                    <center>
+                        <img src="golfball.png" alt="Golf Ball" width="275" height="150">
+                        <img src="green.png" alt="Green" width="275" height="150" class="gap-between-images">
+                    </center>
+                </div>
+            </div>
+        </div>
+
+        <div id="service1" class="section-twomain">
+            <div class="heading">
+                <h2>Our Construction Services</h2>
+            </div>
+            <div class="construction-content">
+                <div class="left-paragraph">
+                    <p>At Muskoka Improvements, we offer a full suite of construction services designed to bring your vision to life with precision and expertise. Whether you’re looking to renovate your property, add a deck, or build a new dock, we can transform your vision into a finished project with professionalism and precision. From initial design and planning through
+                    to project execution and finalization, our skilled team manages every phase of construction with efficient customer service and attention to detail.</p>
+                </div>
+                <div class="image-container">
+                    <img src="kitchen.png" alt="Kitchen">
+                </div>
+		</div>
+                <div class="right-paragraph">
+                    <p>We offer comprehensive solutions that include site preparation, structural work, interior finishes, and project management. Our commitment to quality craftsmanship, timely completion, and clear communication ensures that your construction project is completed to the highest standards, meeting your needs and exceeding your expectations.</p>
+                </div>
+		<div class="headingconstruction">
+            	<h3>Our construction services include, but are not limited to:</h3>
+	</div>
+	    <div class="centered-content">
+                <div class="left-images-container">
+                    <img src="boathouse.png" alt="Boathouse 1">
+                    <img src="boathouse1.png" alt="Boathouse 2">
+                    <img src="boathouse2.png" alt="Boathouse 3">
+                    <img src="boathouse3.png" alt="Boathouse 4">
+                </div>
+                <ul class="bullet-point-list">
+                    <li>• Renovations</li><br />
+                    <li>• Bathrooms and Kitchens</li><br />
+                    <li>• Home Additions</li><br />
+                    <li>• Decks</li><br />
+                    <li>• Docks</li><br />
+                    <li>• Painting</li><br />
+                    <li>• Roofing</li>
+                </ul>
+                <div class="right-images-container">
+                    <img src="boathousedock.png" alt="Boathouse Dock">
+                    <img src="elbowdock.png" alt="Elbow Dock">
+                    <img src="stairs.png" alt="Stairs">
+                    <img src="cottage1.png" alt="Cottage">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="service2" class="section-threemain">
+            <div class="green-background">
+                <h2>Our Property Management Services</h2>
+            </div>
+
+            <!-- Added Text -->
+            <div class="highlighted-paragraph">
+                <p>
+                    At Muskoka Improvements, we offer a full spectrum of comprehensive property management and maintenance services to ensure your property remains in excellent condition. From handling routine maintenance and repairs to managing any task big or small, we do it all! With a focus on responsiveness, reliability, and excellence, we manage your property as if it were our own, discover hassle-free maintenance solutions that allow you to enjoy your property with peace of mind.
+                </p>
+            </div>
+
+            <!-- Updated structure -->
+            <div class="property-management-content">
+                <div class="property-management-text">
+                    <p>
+                        What sets Muskoka Improvements apart is our unwavering commitment to our clients. We take pride in our ability to offer a comprehensive range of services under one roof, this means that we will handle any and all tasks revolving around the management of your property. By offering a variety of services under one roof we have simplified the process for our clients as we are the direct point of contact to get any type of job done and ensuring a consistent standard of excellence across all our offerings. Our approach is personalized, our solutions are innovative, and our dedication to quality is unmatched.
+                    </p>
+			<br /><br />
+			<hr style="border: none; border-top: 15px solid #d8570d; width: 100%;">
+			<br /><br />
+
+                    <p>
+                        Our skilled team handles a wide array of tasks, including weekly maintenance, preventive maintenance, and urgent repairs, ensuring your property remains in pristine condition year-round. From plumbing and electrical work to construction and landscaping, we provide prompt expert solutions tailored to your property’s needs. Our commitment to high-quality service and timely response means you can trust us to maintain your property’s value and functionality, giving you peace of mind and allowing you to focus on what matters most.
+                    </p>
+                </div>
+
+                <div class="property-management-images">
+                    <img src="dock.png" alt="Dock Image">
+                    <img src="dock1.png" alt="Dock1 Image">
+                    <img src="dock2.png" alt="Dock2 Image">
+                </div>
+            </div>
+            <!-- End updated structure -->
+
+<div class="black-background">
+	        <center><h3>We provide a full range of property management and maintenance services that includes, but are not limited to:</h3></center>
+    <div class="bullet-container">
+        <div class="image-left2">
+            <img src="raven.png" alt="Raven">
+        </div>
+        <div class="bullet-text">
+            <center>
+                    <li>Weekly Maintenance</li><br /><br />
+                    <li>Preventative Maintenance</li><br /><br />
+                    <li>Landscaping</li><br /><br />
+                    <li>Year-Round Check-ups</li><br /><br />
+                    <li>Full-Service Property Management</li><br /><br />
+                    <li>Waste Disposal</li><br /><br />
+                    <li>Repairs</li>
+            </center>
+        </div>
+        <div class="image-right2">
+            <img src="fireplace.png" alt="Fireplace">
+        </div>
+    </div>
+	<center><h3>Relax, we’ve got you covered.</h3>
+            <p>Our team of professionals are here to help make your Muskoka living experience simplified.</p></center>
+</div>    
+</div>
+
+        <div id="service3" class="section-fourmain">
+            <img src="MuskokaDockside.png" alt="Muskoka Dockside Logo" width="400" height="400">
+            <p>Islanders, <br /><br /> 
+               As you may be aware, the Town of Bracebridge and the District of Muskoka have made plans to remove household garbage and recycling bins from local marinas. Over the past few seasons, Muskoka Dockside has been providing a convenient weekly garbage and recycling pickup service for a number of island residents in preparation for these changes.<br /><br />
+               We are excited to offer our reliable and efficient weekly household garbage and recycling pickup service, which includes a visit to your dock each week to collect your household waste and then barge it away for proper disposal.<br /><br />
+               We have carefully tested this service over the past few seasons to ensure its effectiveness and have obtained all necessary environmental compliance approvals for transporting household waste to the appropriate landfill sites.<br /><br />
+               Details of the pickup are below: <br /><br />
+            </p>
+            <div class="pickup-details">
+                <div class="bins">
+                    <img src="Bins.png" width="200" height="200">
+                    <p><br />• Pickup Dates: May 21- Oct 15 <br /><br />
+                    • Pickup days will be on Mondays except in which case a holiday falls on a Monday (e.g., Canada Day), then pickup will be on the Tuesday to follow <br /><br />
+                    • Email for inquires <br /><br />
+                    • Garbage includes any household waste <br /><br /><br /> </p>
+                </div>
+                <div class="bottle">
+                    <img src="Bottle.png" width="200" height="200">
+                    <p>• Recycling includes plastics, glass, aluminum, paper, and cardboard <br /><br />
+                    • Household Garbage and Recycling must be bagged <br /><br />
+                    • Bag limits are set at 5 total per week (Email with any inquiries about this) <br /><br />
+                    • Pickup location must be the same every week and be in an animal proof location such as a bear bin, sealed container, etc. <br /><br /> </p>
+                </div>    
+            </div>
+                
+            </div>
+        </div>
+
+        <div id="real-estate" class="section-fivemain real-estate-header">
+            <h1>Real Estate</h1>
+            <img src="Brendan.png" alt="Brendan">
+            <p>Sales Representative and co-founder of Muskoka Improvements, Brendan Mizzen is a dedicated real estate professional. Brendan’s specialized training coupled with expert knowledge of Lake Muskoka serves as a tremendous asset when helping you find your dream Muskoka property. Since a young age Brendan has been a seasonal cottager in Muskoka at his family’s cottage on Lake Rosseau spending his summers discovering why we all love Muskoka. Since 2015, Brendan has been an island resident on Lake Muskoka, with vast familiarity of the lake Brendan can provide you with quality advice and representation to buy or sell your Muskoka island property.</p>
+        </div>
+
+        <div id="projects" class="section-sixmain">
+            <center><h2>Our Projects</h2></center>
+            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/f152e168e85e569681b2aae76683d1d3.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+        </div>
+
+        <div id="careers" class="section-sevenmain">
+            <h2>Careers</h2>
+            <center> <p>At Muskoka Improvements we are actively seeking individuals with construction and property management skills and experience to join our team. Reach out to us today at <a href="mailto:work@muskokaimprovements.com">work@muskokaimprovements.com</a> for more information!</p></center>
+        </div>
+
+    </div>
+
+    <div id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>&copy; 2019 Muskoka Improvements. All rights reserved.</p>
+                <div class="instagram-footer">
+                    <img src="instagram.png" alt="Instagram">
+                    <a href="https://www.instagram.com/muskokaimprovements/" target="_blank">@muskokaimprovements</a>
+                </div>
+                <div class="phone-footer">
+                    <img src="phonesymbol.png" alt="Phone Symbol">
+                    <p><a href="tel:+16476540861">(647)-654-0861</a></p>
+                </div>
+                <div class="mail-footer">
+                    <img src="mail.png" alt="Mail Symbol">
+                    <p><a href="mailto:work@muskokaimprovements.com">work@muskokaimprovements.com</a></p>
+                </div>
+            </div>
+            <img src="muskokalogo.png" width="400" height="400" alt="Muskoka Logo">
+        </div>
+    </div>
+
+    <div id="footer-real-estate" class="footer" style="display: none;">
+        <h3 class="real-estate-footer-heading">Interested in Real Estate?</h3>
+        <div class="real-estate-footer">
+            <p>Brendan Mizzen, Sales Representative<br />
+            Forest Hill Real Estate Inc Brokerage, Muskoka<br /><br />
+            111-2 Medora Street, Port Carling, ON, P0B 1J0<br />
+            Cell: <a href="tel:+6476540861">(647)-654-0861</a><br />
+            <a href="mailto:brendanmizzen@rogers.com">brendanmizzen@rogers.com</a><br />
+            Website: <a href="https://www.realtor.ca/agent/2216440/brendan-mizzen-111-2-medora-street-port-carling-ontario-p0b1j0#firstname=Brendan%20&lastname=Mizzen&page=1&sort=3-A" target="_blank">Real Estate</a></p>
+            <img src="ForestHill.png" alt="Forest Hill Logo" width="400" height="400">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var hash = window.location.hash.substring(1);
+            if (hash) {
+                showSection(hash);
+            } else {
+                showSection('home');
+            }
+
+            // Intersection Observer for video autoplay
+            const video = document.getElementById('home-video');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+            });
+
+            observer.observe(video);
+        });
+
+        function navigateTo(targetId) {
+            showSection(targetId);
+            window.location.hash = targetId;
+        }
+
+        function showSection(sectionId) {
+            document.querySelectorAll('.section-main, .section-twomain, .section-threemain, .section-fourmain, .section-fivemain, .section-sixmain, .section-sevenmain, .section-eightmain').forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            if (sectionId === 'real-estate') {
+                document.getElementById('footer').style.display = 'none';
+                document.getElementById('footer-real-estate').style.display = 'flex';
+            } else {
+                document.getElementById('footer').style.display = 'flex';
+                document.getElementById('footer-real-estate').style.display = 'none';
+            }
+            if (sectionId !== 'contact') {
+                setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+                }, 0); // Slight delay to ensure the section is visible
+            }
+        }
+
+        function scrollToBottom() {
+            const activeSection = document.querySelector('.content .active');
+            if (activeSection) {
+                activeSection.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
