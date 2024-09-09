@@ -874,7 +874,6 @@
             </div>
             <img src="muskokalogo.png" width="400" height="400" alt="Muskoka Logo">
         </div>
-    </div>
 
     <div id="footer-real-estate" class="footer" style="display: none;">
         <h3 class="real-estate-footer-heading">Interested in Real Estate?</h3>
