@@ -16,6 +16,7 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
+
         .header {
             background-image: url('background11.png');
             background-size: cover;
@@ -25,6 +26,7 @@
             padding: 280px;
             text-align: center;
         }
+
         .navbar {
             overflow: hidden;
             background-color: black;
@@ -35,6 +37,7 @@
             top: 0px;
             z-index: 999;
         }
+
         .navbar a {
             display: block;
             color: white;
@@ -43,9 +46,11 @@
             text-decoration: none;
             transition: color 0.3s;
         }
+
         .navbar a:hover {
             color: #d8570d;
         }
+
         .navbar img {
             margin: 0 10px;
         }
@@ -62,12 +67,28 @@
             flex: 1;
         }
 
-        .section-main, .section-twomain, .section-threemain, .section-fourmain, .section-fivemain, .section-sixmain, .section-sevenmain, .section-eightmain {
+        .section-main,
+        .section-twomain,
+        .section-threemain,
+        .section-fourmain,
+        .section-fivemain,
+        .section-sixmain,
+        .section-sevenmain,
+        .section-eightmain {
             display: none;
         }
-        .section-main.active, .section-twomain.active, .section-threemain.active, .section-fourmain.active, .section-fivemain.active, .section-sixmain.active, .section-sevenmain.active, .section-eightmain.active {
+
+        .section-main.active,
+        .section-twomain.active,
+        .section-threemain.active,
+        .section-fourmain.active,
+        .section-fivemain.active,
+        .section-sixmain.active,
+        .section-sevenmain.active,
+        .section-eightmain.active {
             display: block;
         }
+
         .footer {
             background-color: grey;
             color: white;
@@ -85,42 +106,42 @@
             justify-content: center;
             gap: 20px;
         }
-        
+
         .footer-text {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .instagram-footer, .phone-footer, .mail-footer {
+        .instagram-footer,
+        .phone-footer,
+        .mail-footer {
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 10px 0;
         }
 
-        .instagram-footer img, .phone-footer img, .mail-footer img {
+        .instagram-footer img,
+        .phone-footer img,
+        .mail-footer img {
             margin-right: 10px;
-        }
-
-        .instagram-footer img, .phone-footer img, .mail-footer img {
             width: 30px;
             height: 30px;
         }
 
-        .instagram-footer a, .phone-footer a, .mail-footer a {
+        .instagram-footer a,
+        .phone-footer a,
+        .mail-footer a {
             color: white;
             text-decoration: none;
             font-size: 18px;
         }
 
-        .instagram-footer a:hover, .phone-footer a:hover, .mail-footer a:hover {
+        .instagram-footer a:hover,
+        .phone-footer a:hover,
+        .mail-footer a:hover {
             text-decoration: underline;
-        }
-
-        .phone-footer p, .mail-footer p {
-            margin: 0;
-            font-size: 18px;
         }
 
         /* Make images responsive */
@@ -149,17 +170,19 @@
             margin-left: 370px;
         }
 
-        .bins img, .bottle img {
+        .bins img,
+        .bottle img {
             float: left;
             text-align: right;
             margin-right: 10px;
         }
 
-        .bins p,.bottle p {
+        .bins p, .bottle p {
             color: white;
         }
 
-        .real-estate-footer, .footer-content {
+        .real-estate-footer,
+        .footer-content {
             margin: 0;
             padding: 5px 0;
             line-height: 1.5;
@@ -194,11 +217,12 @@
             margin-left: 20px;
             margin-bottom: 20px;
             margin-right: 100px;
-            width: 250px; 
+            width: 250px;
             height: 300px;
         }
+
         .real-estate-header p {
-            line-height:1.5;
+            line-height: 1.5;
         }
 
         .section-sevenmain p {
@@ -221,9 +245,9 @@
 
         .property-management-text {
             flex: 1;
-	    margin-top: 40px;
+            margin-top: 40px;
             margin-right: 40px;
-	    line-height: 1.5;
+            line-height: 1.5;
         }
 
         .property-management-images {
@@ -252,12 +276,13 @@
             width: 100vw;
             margin-left: calc(-50vw + 50%);
             box-sizing: border-box;
-	    margin-top: -50px
+            margin-top: -50px;
         }
-	.highlighted-paragraph p {
-	    margin-right: 20px;
-	    margin-left: 20px;
-	}
+
+        .highlighted-paragraph p {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
 
         /* Stone Background for Home Section */
         .stone-background {
@@ -276,38 +301,38 @@
             overflow-x: hidden;
         }
 
-	.green-background {
-	    position: relative;
-	    background-image: url('green.png');
-	    background-size: cover;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    padding: 200px 0;
-	    text-align: center;
-	    color: white;
-	    width: 100vw;
-	    margin-left: calc(-50vw + 50%);
-	    position: relative;
-	    left: 0;
-	    top: -40px;
-	    overflow-x: hidden;
-	}
-	
-	.green-background::before {
-	    content: '';
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    width: 100%;
-	    height: 100%;
-	    background-color: rgba(0, 0, 0, 0.5);
-	    z-index: 1;
-	}
+        .green-background {
+            position: relative;
+            background-image: url('green.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 200px 0;
+            text-align: center;
+            color: white;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            position: relative;
+            left: 0;
+            top: -40px;
+            overflow-x: hidden;
+        }
 
-	.green-background h2 {
-	    position: relative;
-	    z-index: 2;
-	}
+        .green-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .green-background h2 {
+            position: relative;
+            z-index: 2;
+        }
 
         /* Updated styles for black background section */
         .founded-text {
@@ -420,33 +445,33 @@
             text-align: justify;
             margin-left: 50px;
             margin-right: 120px;
-	        line-height: 1.4;
+            line-height: 1.4;
         }
 
         .image-container {
             flex: 1;
-	        text-align: right;
-    	    transform: translateX(-100px);
+            text-align: right;
+            transform: translateX(-100px);
         }
 
         .image-container img {
             width: 100%;
-	        margin-left: -40px;
+            margin-left: -40px;
         }
 
         /* Black banner for the right paragraph */
         .right-paragraph {
-	    background-color: black;
-	    color: white;
-	    text-align: center;
-	    margin: 0 auto;
-	    padding: 50px 0;
-	    width: 100vw;
-	    position: relative;
-	    left: calc(-50vw + 50%);
-	    right: calc(-50vw + 50%);
-	    box-sizing: border-box;
-	}
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin: 0 auto;
+            padding: 50px 0;
+            width: 100vw;
+            position: relative;
+            left: calc(-50vw + 50%);
+            right: calc(-50vw + 50%);
+            box-sizing: border-box;
+        }
 
         /* Container for the bullet points and images */
         .centered-content {
@@ -459,7 +484,7 @@
             color: black;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
-	        margin-bottom: calc(-50vw + 50%);
+            margin-bottom: calc(-50vw + 50%);
             box-sizing: border-box;
             position: relative;
         }
@@ -485,32 +510,34 @@
 
         .left-images-container {
             display: grid;
-	    background-color: #d8570d;
+            background-color: #d8570d;
             padding: 15px;
             grid-template-columns: repeat(2, 1fr);
             gap: 5px;
             width: 450px;
-	    margin-right: 125px;
-	    margin-left: 75px;
+            margin-right: 125px;
+            margin-left: 75px;
         }
-	.right-images-container {
-	    display: grid;
-	    background-color: #d8570d;
+
+        .right-images-container {
+            display: grid;
+            background-color: #d8570d;
             padding: 15px;
             grid-template-columns: repeat(2, 1fr);
             gap: 5px;
             width: 450px;
-	    margin-right: 75px;
-	    margin-left: 125px;
+            margin-right: 75px;
+            margin-left: 125px;
+        }
 
-	}
-	    .left-images-container img, .right-images-container img{
-	     margin-left: -1px;
-	     height: 200px
-	    }
-	
-        .headingconstruction { 
-	    background-color: white;
+        .left-images-container img,
+        .right-images-container img {
+            margin-left: -1px;
+            height: 200px;
+        }
+
+        .headingconstruction {
+            background-color: white;
             color: black;
             width: 100vw;
             padding: 20px 0;
@@ -518,13 +545,14 @@
             margin-left: calc(-50vw + 50%);
             box-sizing: border-box;
             position: relative;
-	    }
-	.property-management-item {
-	    display: flex;
-	    justify-content: space-between;
+        }
+
+        .property-management-item {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-	    margin: 40px 0;
-	}
+            margin: 40px 0;
+        }
 
         .property-management-item2 {
             display: flex;
@@ -534,42 +562,42 @@
             padding: 50px 0;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
-            box-sizing: border-box;	
-	        margin-left: 50px;
+            box-sizing: border-box;
+            margin-left: 50px;
         }
 
-	    .black-background {
-	        background-color: black;
-	        color: white;
-	        padding: 40px;
-	        width: 100vw;
-	        margin-left: calc(-50vw + 50%);
-	        box-sizing: border-box;
-	        position: relative;
-	        margin-bottom: -40px;
-	        min-height: calc(100vh - 100px);
-		margin-top: 10px;
-	    }
+        .black-background {
+            background-color: black;
+            color: white;
+            padding: 40px;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            box-sizing: border-box;
+            position: relative;
+            margin-bottom: -40px;
+            min-height: calc(100vh - 100px);
+            margin-top: 10px;
+        }
 
-	    .bullet-container {
-	        display: flex;
-	        align-items: center;
-	        justify-content: center;
-	        gap: 50px;
-	    }
+        .bullet-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
 
-	    .bullet-text {
-	        flex: 1;
-	    }
+        .bullet-text {
+            flex: 1;
+        }
 
-	    .image-left2, .image-right2 {
-	        flex: 1;
-	    }
+        .image-left2, .image-right2 {
+            flex: 1;
+        }
 
-	    .image-left2 img, .image-right2 img {
-	        width: 600px;
-	        height: 400px;
-	    }
+        .image-left2 img, .image-right2 img {
+            width: 600px;
+            height: 400px;
+        }
     </style>
 </head>
 <body>
@@ -578,7 +606,7 @@
         <a href="#home" onclick="navigateTo('home')">Home</a>
         <a href="#projects" onclick="navigateTo('projects')">Projects</a>
         <a href="#service1" onclick="navigateTo('service1')">General Contracting</a>
-        <a href="#service3" onclick="navigateTo('service3')">Weekly Garbage</a>        
+        <a href="#service3" onclick="navigateTo('service3')">Weekly Garbage</a>
         <img src="muskokalogo.png" alt="Muskoka Logo" width="175" height="120">
         <a href="#service2" onclick="navigateTo('service2')">Property Management</a>
         <a href="#real-estate" onclick="navigateTo('real-estate')">Real Estate</a>
@@ -587,7 +615,7 @@
     </div>
 
     <div class="content">
-<div id="home" class="section-main">
+        <div id="home" class="section-main">
             <div class="stone-background">
                 <h1><br />About Us</h1>
             </div>
@@ -783,6 +811,7 @@
             <h2>Careers</h2>
             <center> <p>At Muskoka Improvements we are actively seeking individuals with construction and property management skills and experience to join our team. Reach out to us today at <a href="mailto:work@muskokaimprovements.com">work@muskokaimprovements.com</a> for more information!</p></center>
         </div>
+
     </div>
 
     <div id="footer" class="footer">
@@ -801,20 +830,8 @@
                     <img src="mail.png" alt="Mail Symbol">
                     <p><a href="mailto:work@muskokaimprovements.com">work@muskokaimprovements.com</a></p>
                 </div>
-		</div>
+            </div>
             <img src="muskokalogo.png" width="400" height="400" alt="Muskoka Logo">
-        </div>
-	</div>
-    <div id="footer-real-estate" class="footer" style="display: none;">
-        <h3 class="real-estate-footer-heading">Interested in Real Estate?</h3>
-        <div class="real-estate-footer">
-            <p>Brendan Mizzen, Sales Representative<br />
-            Forest Hill Real Estate Inc Brokerage, Muskoka<br /><br />
-            111-2 Medora Street, Port Carling, ON, P0B 1J0<br />
-            Cell: <a href="tel:+6476540861">(647)-654-0861</a><br />
-            <a href="mailto:brendanmizzen@rogers.com">brendanmizzen@rogers.com</a><br />
-            Website: <a href="https://www.realtor.ca/agent/2216440/brendan-mizzen-111-2-medora-street-port-carling-ontario-p0b1j0#firstname=Brendan%20&lastname=Mizzen&page=1&sort=3-A" target="_blank">Real Estate</a></p>
-            <img src="ForestHill.png" alt="Forest Hill Logo" width="400" height="400">
         </div>
     </div>
 
