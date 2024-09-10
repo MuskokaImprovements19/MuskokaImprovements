@@ -23,8 +23,10 @@
             background-repeat: no-repeat;
             background-attachment: local;
             background-position: center;
-            padding: 280px;
+            padding: 150px 0;
             text-align: center;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
         }
 
         .navbar {
@@ -34,8 +36,9 @@
             justify-content: center;
             align-items: center;
             position: sticky;
-            top: 0px;
+            top: 0;
             z-index: 999;
+            width: 100%;
         }
 
         .navbar a {
@@ -51,18 +54,18 @@
             color: #d8570d;
         }
 
+        /* Increased the navbar logo size */
         .navbar img {
             margin: 0 10px;
-        }
-
-        .lightwidget-widget, .lightwidget-overlay {
-            z-index: 1001 !important;
+            width: 170px; /* Increased logo size */
+            height: 60px;
         }
 
         .content {
             padding: 20px;
             background-color: white;
-            margin: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
             border-radius: 10px;
             flex: 1;
         }
@@ -76,6 +79,8 @@
         .section-sevenmain,
         .section-eightmain {
             display: none;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .section-main.active,
@@ -98,6 +103,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
         }
 
         .footer-content {
@@ -105,6 +111,8 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
+            max-width: 1200px;
+            width: 100%;
         }
 
         .footer-text {
@@ -165,9 +173,9 @@
             border: 2px solid #d8570d;
             padding: 10px;
             background-color: #d8570d;
-            margin-bottom: 20px;
-            margin-right: 370px;
-            margin-left: 370px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
         }
 
         .bins img,
@@ -177,111 +185,9 @@
             margin-right: 10px;
         }
 
-        .bins p, .bottle p {
+        .bins p,
+        .bottle p {
             color: white;
-        }
-
-        .real-estate-footer,
-        .footer-content {
-            margin: 0;
-            padding: 5px 0;
-            line-height: 1.5;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .real-estate-footer p {
-            text-align: center;
-            margin-right: 100px;
-        }
-
-        .real-estate-footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .real-estate-footer a:hover {
-            text-decoration: underline;
-        }
-
-        .real-estate-footer-heading {
-            text-align: center;
-            margin-right: 500px;
-            margin-bottom: 0px;
-        }
-
-        .real-estate-header img {
-            float: right;
-            margin-left: 20px;
-            margin-bottom: 20px;
-            margin-right: 100px;
-            width: 250px;
-            height: 300px;
-        }
-
-        .real-estate-header p {
-            line-height: 1.5;
-        }
-
-        .section-sevenmain p {
-            text-align: center;
-        }
-
-        .section-sevenmain a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .section-sevenmain a:hover {
-            color: #d8570d;
-        }
-
-        /* Property Management Layout */
-        .property-management-content {
-            display: flex;
-        }
-
-        .property-management-text {
-            flex: 1;
-            margin-top: 40px;
-            margin-right: 40px;
-            line-height: 1.5;
-        }
-
-        .property-management-images {
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 10px;
-        }
-
-        .property-management-images img {
-            width: 100%;
-            height: 300px;
-        }
-
-        .property-management-images img:first-child {
-            grid-column: span 2;
-        }
-
-        /* New background styling for the first paragraph */
-        .highlighted-paragraph {
-            background-color: #d8570d;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin: 20px 0;
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
-            box-sizing: border-box;
-            margin-top: -50px;
-        }
-
-        .highlighted-paragraph p {
-            margin-right: 20px;
-            margin-left: 20px;
         }
 
         /* Stone Background for Home Section */
@@ -295,10 +201,7 @@
             color: white;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
-            position: relative;
-            left: 0;
-            top: -40px;
-            overflow-x: hidden;
+            margin-top: 0; /* Remove gap between stonebackground and navbar */
         }
 
         .green-background {
@@ -339,15 +242,11 @@
             background-color: black;
             color: white;
             text-align: center;
-            margin: 0 auto;
             padding: 50px 60px;
-            max-width: 100%;
-            position: relative;
-            top: -40px;
+            width: 100vw;
             margin-left: calc(-50vw + 50%);
-            left: 0;
-            right: 0;
-            width: 2000vw;
+            max-width: 100vw; /* Ensure the black banner touches both sides */
+            box-sizing: border-box;
         }
 
         /* Flexbox Layout for "Our Mission" Section */
@@ -469,7 +368,6 @@
             width: 100vw;
             position: relative;
             left: calc(-50vw + 50%);
-            right: calc(-50vw + 50%);
             box-sizing: border-box;
         }
 
@@ -590,15 +488,18 @@
             flex: 1;
         }
 
-        .image-left2, .image-right2 {
+        .image-left2,
+        .image-right2 {
             flex: 1;
         }
 
-        .image-left2 img, .image-right2 img {
+        .image-left2 img,
+        .image-right2 img {
             width: 600px;
             height: 400px;
         }
-    </style>
+
+   </style>
 </head>
 <body>
     <div class="header"></div>
@@ -615,7 +516,7 @@
     </div>
 
     <div class="content">
-        <div id="home" class="section-main">
+         <div id="home" class="section-main">
             <div class="stone-background">
                 <h1><br />About Us</h1>
             </div>
@@ -812,6 +713,7 @@
             <center> <p>At Muskoka Improvements we are actively seeking individuals with construction and property management skills and experience to join our team. Reach out to us today at <a href="mailto:work@muskokaimprovements.com">work@muskokaimprovements.com</a> for more information!</p></center>
         </div>
 
+
     </div>
 
     <div id="footer" class="footer">
@@ -834,6 +736,19 @@
             <img src="muskokalogo.png" width="400" height="400" alt="Muskoka Logo">
         </div>
     </div>
+   	<div id="footer-real-estate" class="footer" style="display: none;">
+        <h3 class="real-estate-footer-heading">Interested in Real Estate?</h3>
+        <div class="real-estate-footer">
+            <p>Brendan Mizzen, Sales Representative<br />
+            Forest Hill Real Estate Inc Brokerage, Muskoka<br /><br />
+            111-2 Medora Street, Port Carling, ON, P0B 1J0<br />
+            Cell: <a href="tel:+6476540861">(647)-654-0861</a><br />
+            <a href="mailto:brendanmizzen@rogers.com">brendanmizzen@rogers.com</a><br />
+            Website: <a href="https://www.realtor.ca/agent/2216440/brendan-mizzen-111-2-medora-street-port-carling-ontario-p0b1j0#firstname=Brendan%20&lastname=Mizzen&page=1&sort=3-A" target="_blank">Real Estate</a></p>
+            <img src="ForestHill.png" alt="Forest Hill Logo" width="400" height="400">
+        </div>
+    </div>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
