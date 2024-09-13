@@ -30,7 +30,6 @@
         }
 
         .navbar {
-            overflow: hidden;
             background-color: black;
             display: flex;
             justify-content: center;
@@ -38,7 +37,9 @@
             position: sticky;
             top: 0;
             z-index: 999;
-            width: 100%;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            box-sizing: border-box;
         }
 
         .navbar a {
@@ -103,7 +104,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 100%;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
         }
 
         .footer-content {
@@ -256,6 +258,9 @@
         .mission-section, .expertise-section, .expertise-content {
             margin-top: 60px;
             margin-bottom: 60px;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            box-sizing: border-box;
         }
 
         /* Flexbox Layout for "Our Mission" Section */
