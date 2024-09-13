@@ -23,7 +23,7 @@
             background-repeat: no-repeat;
             background-attachment: local;
             background-position: center;
-            padding: 150px 0;
+            padding: 200px 0; /* Increased padding to make background11.png appear bigger */
             text-align: center;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
@@ -55,10 +55,9 @@
             color: #d8570d;
         }
 
-        /* Increased the navbar logo size */
         .navbar img {
             margin: 0 10px;
-            width: 170px; /* Increased logo size */
+            width: 170px;
             height: 60px;
         }
 
@@ -69,6 +68,7 @@
             max-width: 1200px;
             border-radius: 10px;
             flex: 1;
+            text-align: center; /* Centering content */
         }
 
         .section-main,
@@ -154,7 +154,6 @@
             text-decoration: underline;
         }
 
-        /* Make images responsive */
         img {
             max-width: 100%;
             height: auto;
@@ -192,7 +191,6 @@
             color: white;
         }
 
-        /* Stone Background for Home Section */
         .stone-background {
             background-image: url('stonebackground.png');
             background-size: cover;
@@ -204,8 +202,8 @@
             width: 100vw;
             margin-left: calc(-50vw + 50%);
             margin-top: 0;
-            position: relative; /* To ensure it is correctly aligned under the navbar */
-            top: -20px; /* No gap between navbar and stone-background */
+            position: relative;
+            top: -20px;
         }
 
         .green-background {
@@ -241,7 +239,6 @@
             z-index: 2;
         }
 
-        /* Updated styles for black background section */
         .founded-text {
             background-color: black;
             color: white;
@@ -249,13 +246,14 @@
             padding: 50px 60px;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
-            max-width: 100vw; /* Ensure the black banner touches both sides */
+            max-width: 100vw;
             box-sizing: border-box;
 	        margin-top: -20px;
         }
 
-        /* Increased spacing underneath the black banner for home tab content */
-        .mission-section, .expertise-section, .expertise-content {
+        .mission-section,
+        .expertise-section,
+        .expertise-content {
             margin-top: 60px;
             margin-bottom: 60px;
             width: 100vw;
@@ -263,7 +261,6 @@
             box-sizing: border-box;
         }
 
-        /* Flexbox Layout for "Our Mission" Section */
         .mission-section {
             display: flex;
             align-items: flex-start;
@@ -279,32 +276,23 @@
             flex: 2;
             margin-left: -60px;
             margin-right: 20px;
-        }
-
-        .mission-text h2 {
             text-align: left;
-            margin-bottom: 20px;
         }
 
         .bullet-icon {
-            margin-right: 30px;
-            height: 75px;
-            width: 100px;
+            margin-right: 10px;
+            height: 80px; /* Smaller bullet size */
+            width: 80px; /* Smaller bullet size */
             align-self: flex-start;
             margin-top: 60px;
-            margin-left: 0;
-        }
-
-        .mission-text p {
-            text-align: left;
-            margin: 0;
+	    margin-right: 25px;
         }
 
         .mission-video {
             flex: 1;
+            margin-left: 40px; /* Added space between the text and the video */
         }
 
-        /* Centered Text Layout for "Our Expertise" Section */
         .expertise-section {
             margin: 40px auto;
             text-align: center;
@@ -313,11 +301,10 @@
             padding: 0 20px;
         }
 
-        /* Flexbox Layout for Construction and Property Management */
         .expertise-content {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
+            gap: 40px; /* Increased gap between the two orange boxes */
             max-width: 1200px;
             margin: 0 auto;
         }
