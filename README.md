@@ -201,7 +201,9 @@
             color: white;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
-            margin-top: 0; /* Remove gap between stonebackground and navbar */
+            margin-top: 0;
+            position: relative; /* To ensure it is correctly aligned under the navbar */
+            top: -20px; /* No gap between navbar and stone-background */
         }
 
         .green-background {
@@ -247,6 +249,13 @@
             margin-left: calc(-50vw + 50%);
             max-width: 100vw; /* Ensure the black banner touches both sides */
             box-sizing: border-box;
+	        margin-top: -20px;
+        }
+
+        /* Increased spacing underneath the black banner for home tab content */
+        .mission-section, .expertise-section, .expertise-content {
+            margin-top: 60px;
+            margin-bottom: 60px;
         }
 
         /* Flexbox Layout for "Our Mission" Section */
@@ -310,7 +319,7 @@
 
         .expertise-content > div {
             flex: 1;
-            padding: 10px;
+            padding: 20px;
             background-color: #d8570d;
             color: white;
             border: 2px solid #d8570d;
