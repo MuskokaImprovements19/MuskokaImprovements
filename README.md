@@ -306,6 +306,7 @@
             gap: 80px;
             max-width: 1200px;
             margin: 0 auto;
+	    align-items: center;
         }
 
         /* Updated padding for orange boxes */
