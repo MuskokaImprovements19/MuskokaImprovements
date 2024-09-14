@@ -23,7 +23,7 @@
             background-repeat: no-repeat;
             background-attachment: local;
             background-position: center;
-            padding: 200px 0; /* Increased padding to make background11.png appear bigger */
+            padding: 280px 0;
             text-align: center;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
@@ -68,7 +68,7 @@
             max-width: 1200px;
             border-radius: 10px;
             flex: 1;
-            text-align: center; /* Centering content */
+            text-align: center;
         }
 
         .section-main,
@@ -129,7 +129,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 10px 0;
+            margin: 5px 0;
         }
 
         .instagram-footer img,
@@ -254,10 +254,9 @@
         .mission-section,
         .expertise-section,
         .expertise-content {
-            margin-top: 60px;
+            margin-top: 5px;
             margin-bottom: 60px;
             width: 100vw;
-            margin-left: calc(-50vw + 50%);
             box-sizing: border-box;
         }
 
@@ -281,16 +280,16 @@
 
         .bullet-icon {
             margin-right: 10px;
-            height: 80px; /* Smaller bullet size */
-            width: 80px; /* Smaller bullet size */
+            height: 80px;
+            width: 80px;
             align-self: flex-start;
             margin-top: 60px;
-	    margin-right: 25px;
+	        margin-right: 25px;
         }
 
         .mission-video {
             flex: 1;
-            margin-left: 40px; /* Added space between the text and the video */
+            margin-left: 40px;
         }
 
         .expertise-section {
@@ -304,30 +303,46 @@
         .expertise-content {
             display: flex;
             justify-content: space-between;
-            gap: 40px; /* Increased gap between the two orange boxes */
+            gap: 80px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
+        /* Updated padding for orange boxes */
         .expertise-content > div {
             flex: 1;
-            padding: 20px;
+            padding: 50px; /* Reduced padding for a shorter height */
             background-color: #d8570d;
             color: white;
             border: 2px solid #d8570d;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Aligns the content to the top */
+      	    text-align: center; /* Ensure the text is centered */
         }
 
         .expertise-content > div h3 {
             margin-bottom: 20px;
             color: white;
+	    text-align: center;
+	    width: 100%; /* Ensures the heading takes up the full width */
+	    display: block; /* Ensures it's treated as a block element */
+	}
+
+        .expertise-content img {
+            margin-right: 5px;
+            vertical-align: middle;
         }
 
-        .expertise-content > div img {
+        .expertise-content img:last-child {
+            margin-right: 0px;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: space-between;
             margin-top: 20px;
-        }
-
-        .expertise-content > div .gap-between-images {
-            margin-left: 5px;
+            margin-left: -32px;
         }
 
         .heading {
@@ -359,7 +374,6 @@
             margin-left: -40px;
         }
 
-        /* Black banner for the right paragraph */
         .right-paragraph {
             background-color: black;
             color: white;
@@ -372,7 +386,6 @@
             box-sizing: border-box;
         }
 
-        /* Container for the bullet points and images */
         .centered-content {
             display: flex;
             align-items: center;
@@ -535,7 +548,7 @@
                     </div>
                 </div>
                 <div class="mission-video">
-                    <video id="home-video" width="500" height="300" controls>
+                    <video id="home-video" width="500" height="300" controls muted>
                         <source src="Norms.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -549,18 +562,23 @@
 
             <div class="expertise-content">
                 <div class="construction">
-                   <center><h3>Construction</h3></center>
+                   <h3>Construction</h3>
                     <p>Our team’s dedication to craftsmanship ensures that every aspect of your project is executed with precision and care from initial concept to successful completion, reflecting the natural beauty and charm of Muskoka in every detail.</p>
-                    <center><img src="Bedroom.png" alt="Bedroom" width="290" height="200"><img src="bathroom.png" width="215" height="200"></center>
+                    <!-- Adjusted Bedroom and Bathroom images with gap -->
+                    <div class="image-row">
+                        <img src="Bedroom.png" alt="Bedroom" width="290" height="200">
+                        <img src="bathroom.png" width="225" height="225">
+                    </div>
                 </div>
 
-         <div class="property-management">
-            <center> <h3>Property Management</h3> </center>
+                <div class="property-management">
+                     <h3>Property Management</h3> 
                     <p>Our expertise includes a variety of comprehensive property management services, meaning we will handle any project big or small to ensure that your property remains pristine and well-maintained throughout the year to allow you to relax and enjoy Muskoka’s tranquility.</p>
-                    <center>
-                        <img src="golfball.png" alt="Golf Ball" width="275" height="150">
-                        <img src="green.png" alt="Green" width="275" height="150" class="gap-between-images">
-                    </center>
+                    <!-- Adjusted Golf Ball and Green images side by side with gap -->
+                    <div class="image-row">
+                        <img src="golfball.png" alt="Golf Ball" width="260" height="150">
+                        <img src="green.png" alt="Green" width="260" height="150">
+                    </div>
                 </div>
             </div>
 	 </div>   
@@ -752,58 +770,91 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var hash = window.location.hash.substring(1);
-            if (hash) {
-                showSection(hash);
-            } else {
-                showSection('home');
-            }
+       document.addEventListener('DOMContentLoaded', function () {
+    const video = document.getElementById('home-video');
 
-            // Intersection Observer for video autoplay
-            const video = document.getElementById('home-video');
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        video.play();
-                    } else {
-                        video.pause();
-                    }
-                });
+    // Function to play video if it's in view
+    function playVideoIfInView() {
+        const rect = video.getBoundingClientRect();
+        const isInView = (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+
+        if (isInView) {
+            video.play().catch(err => {
+                console.error('Failed to play the video: ', err);
             });
-
-            observer.observe(video);
-        });
-
-        function navigateTo(targetId) {
-            showSection(targetId);
-            window.location.hash = targetId;
+        } else {
+            video.pause();
         }
+    }
 
-        function showSection(sectionId) {
-            document.querySelectorAll('.section-main, .section-twomain, .section-threemain, .section-fourmain, .section-fivemain, .section-sixmain, .section-sevenmain, .section-eightmain').forEach(section => section.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active');
-            if (sectionId === 'real-estate') {
-                document.getElementById('footer').style.display = 'none';
-                document.getElementById('footer-real-estate').style.display = 'flex';
+    // Intersection Observer to monitor when video comes into view
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.play().catch(err => {
+                    console.error('Failed to play the video: ', err);
+                });
             } else {
-                document.getElementById('footer').style.display = 'flex';
-                document.getElementById('footer-real-estate').style.display = 'none';
+                video.pause();
             }
-            if (sectionId !== 'contact') {
-                setTimeout(() => {
-                    window.scrollTo({ top: 0, behavior: 'instant' });
-                }, 0); // Slight delay to ensure the section is visible
-            }
-        }
+        });
+    });
 
-        function scrollToBottom() {
-            const activeSection = document.querySelector('.content .active');
-            if (activeSection) {
-                activeSection.scrollIntoView({ behavior: 'smooth', block: 'end' });
-                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            }
-        }
+    observer.observe(video);
+
+    // Call playVideoIfInView on load to ensure it plays if already visible
+    window.addEventListener('load', playVideoIfInView);
+
+    // Call playVideoIfInView on scroll to ensure it plays when in view
+    window.addEventListener('scroll', playVideoIfInView);
+
+    // Call playVideoIfInView on resize to ensure it adapts to window size changes
+    window.addEventListener('resize', playVideoIfInView);
+
+    // Navigation handling
+    var hash = window.location.hash.substring(1);
+    if (hash) {
+        showSection(hash);
+    } else {
+        showSection('home');
+    }
+});
+
+function navigateTo(targetId) {
+    showSection(targetId);
+    window.location.hash = targetId;
+}
+
+function showSection(sectionId) {
+    document.querySelectorAll('.section-main, .section-twomain, .section-threemain, .section-fourmain, .section-fivemain, .section-sixmain, .section-sevenmain, .section-eightmain').forEach(section => section.classList.remove('active'));
+    document.getElementById(sectionId).classList.add('active');
+    if (sectionId === 'real-estate') {
+        document.getElementById('footer').style.display = 'none';
+        document.getElementById('footer-real-estate').style.display = 'flex';
+    } else {
+        document.getElementById('footer').style.display = 'flex';
+        document.getElementById('footer-real-estate').style.display = 'none';
+    }
+    if (sectionId !== 'contact') {
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'instant' });
+        }, 0);
+    }
+}
+
+function scrollToBottom() {
+    const activeSection = document.querySelector('.content .active');
+    if (activeSection) {
+        activeSection.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+}
+
     </script>
 </body>
 </html>
