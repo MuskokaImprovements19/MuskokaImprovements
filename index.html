@@ -16,32 +16,25 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
-
         .header {
             background-image: url('background11.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: local;
             background-position: center;
-            padding: 280px 0;
+            padding: 280px;
             text-align: center;
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
         }
-
         .navbar {
+            overflow: hidden;
             background-color: black;
             display: flex;
             justify-content: center;
             align-items: center;
             position: sticky;
-            top: 0;
+            top: 0px;
             z-index: 999;
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
-            box-sizing: border-box;
         }
-
         .navbar a {
             display: block;
             color: white;
@@ -50,51 +43,31 @@
             text-decoration: none;
             transition: color 0.3s;
         }
-
         .navbar a:hover {
             color: #d8570d;
         }
-
         .navbar img {
             margin: 0 10px;
-            width: 170px;
-            height: 60px;
+        }
+
+        .lightwidget-widget, .lightwidget-overlay {
+            z-index: 1001 !important;
         }
 
         .content {
             padding: 20px;
             background-color: white;
-            margin: 0 auto;
-            max-width: 1200px;
+            margin: 20px;
             border-radius: 10px;
             flex: 1;
-            text-align: center;
         }
 
-        .section-main,
-        .section-twomain,
-        .section-threemain,
-        .section-fourmain,
-        .section-fivemain,
-        .section-sixmain,
-        .section-sevenmain,
-        .section-eightmain {
+        .section-main, .section-twomain, .section-threemain, .section-fourmain, .section-fivemain, .section-sixmain, .section-sevenmain, .section-eightmain {
             display: none;
-            width: 100%;
-            box-sizing: border-box;
         }
-
-        .section-main.active,
-        .section-twomain.active,
-        .section-threemain.active,
-        .section-fourmain.active,
-        .section-fivemain.active,
-        .section-sixmain.active,
-        .section-sevenmain.active,
-        .section-eightmain.active {
+        .section-main.active, .section-twomain.active, .section-threemain.active, .section-fourmain.active, .section-fivemain.active, .section-sixmain.active, .section-sevenmain.active, .section-eightmain.active {
             display: block;
         }
-
         .footer {
             background-color: grey;
             color: white;
@@ -104,56 +77,45 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
         }
 
         .footer-content {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
-            max-width: 1200px;
-            width: 100%;
+            gap: 1px; /* Reduced gap between Instagram, phone, and email */
         }
-
+        
         .footer-text {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .instagram-footer,
-        .phone-footer,
-        .mail-footer {
+        .instagram-footer, .phone-footer, .mail-footer {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 5px 0;
+            margin: 2px 0; /* Reduced the margin to decrease vertical spacing */
         }
 
-        .instagram-footer img,
-        .phone-footer img,
-        .mail-footer img {
-            margin-right: 10px;
+        .instagram-footer img, .phone-footer img, .mail-footer img {
+            margin-right: 5px; /* Reduced the space between the icon and the text */
             width: 30px;
             height: 30px;
         }
 
-        .instagram-footer a,
-        .phone-footer a,
-        .mail-footer a {
+        .instagram-footer a, .phone-footer a, .mail-footer a {
             color: white;
             text-decoration: none;
             font-size: 18px;
         }
 
-        .instagram-footer a:hover,
-        .phone-footer a:hover,
-        .mail-footer a:hover {
+        .instagram-footer a:hover, .phone-footer a:hover, .mail-footer a:hover {
             text-decoration: underline;
         }
 
+        /* Make images responsive */
         img {
             max-width: 100%;
             height: auto;
@@ -174,23 +136,122 @@
             border: 2px solid #d8570d;
             padding: 10px;
             background-color: #d8570d;
-            margin: 20px auto;
-            max-width: 800px;
-            text-align: center;
+            margin-bottom: 20px;
+            margin-right: 370px;
+            margin-left: 370px;
         }
 
-        .bins img,
-        .bottle img {
+        .bins img, .bottle img {
             float: left;
             text-align: right;
             margin-right: 10px;
         }
 
-        .bins p,
-        .bottle p {
+        .bins p,.bottle p {
             color: white;
         }
 
+        .real-estate-footer, .footer-content {
+            margin: 0;
+            padding: 5px 0;
+            line-height: 1.5;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .real-estate-footer p {
+            text-align: center;
+            margin-right: 100px;
+        }
+
+        .real-estate-footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .real-estate-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .real-estate-footer-heading {
+            text-align: center;
+            margin-right: 500px;
+            margin-bottom: 0px;
+        }
+
+        .real-estate-header img {
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            margin-right: 100px;
+            width: 250px; 
+            height: 300px;
+        }
+        .real-estate-header p {
+            line-height:1.5;
+        }
+
+        .section-sevenmain p {
+            text-align: center;
+        }
+
+        .section-sevenmain a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .section-sevenmain a:hover {
+            color: #d8570d;
+        }
+
+        /* Property Management Layout */
+        .property-management-content {
+            display: flex;
+        }
+
+        .property-management-text {
+            flex: 1;
+	    margin-top: 40px;
+            margin-right: 40px;
+	    line-height: 1.5;
+        }
+
+        .property-management-images {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+
+        .property-management-images img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .property-management-images img:first-child {
+            grid-column: span 2;
+        }
+
+        /* New background styling for the first paragraph */
+        .highlighted-paragraph {
+            background-color: #d8570d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            box-sizing: border-box;
+	    margin-top: -50px
+        }
+	.highlighted-paragraph p {
+	    margin-right: 20px;
+	    margin-left: 20px;
+	}
+
+        /* Stone Background for Home Section */
         .stone-background {
             background-image: url('stonebackground.png');
             background-size: cover;
@@ -201,65 +262,62 @@
             color: white;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
-            margin-top: 0;
-            position: relative;
-            top: -20px;
-        }
-
-        .green-background {
-            position: relative;
-            background-image: url('green.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 200px 0;
-            text-align: center;
-            color: white;
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
             position: relative;
             left: 0;
             top: -40px;
             overflow-x: hidden;
         }
 
-        .green-background::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
+	.green-background {
+	    position: relative;
+	    background-image: url('green.png');
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    padding: 200px 0;
+	    text-align: center;
+	    color: white;
+	    width: 100vw;
+	    margin-left: calc(-50vw + 50%);
+	    position: relative;
+	    left: 0;
+	    top: -40px;
+	    overflow-x: hidden;
+	}
+	
+	.green-background::before {
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0, 0, 0, 0.5);
+	    z-index: 1;
+	}
 
-        .green-background h2 {
-            position: relative;
-            z-index: 2;
-        }
+	.green-background h2 {
+	    position: relative;
+	    z-index: 2;
+	}
 
+        /* Updated styles for black background section */
         .founded-text {
             background-color: black;
             color: white;
             text-align: center;
+            margin: 0 auto;
             padding: 50px 60px;
-            width: 100vw;
+            max-width: 100%;
+            position: relative;
+            top: -40px;
             margin-left: calc(-50vw + 50%);
-            max-width: 100vw;
-            box-sizing: border-box;
-	        margin-top: -20px;
+            left: 0;
+            right: 0;
+            width: 2000vw;
         }
 
-        .mission-section,
-        .expertise-section,
-        .expertise-content {
-            margin-top: 5px;
-            margin-bottom: 60px;
-            width: 100vw;
-            box-sizing: border-box;
-        }
-
+        /* Flexbox Layout for "Our Mission" Section */
         .mission-section {
             display: flex;
             align-items: flex-start;
@@ -275,23 +333,32 @@
             flex: 2;
             margin-left: -60px;
             margin-right: 20px;
+        }
+
+        .mission-text h2 {
             text-align: left;
+            margin-bottom: 20px;
         }
 
         .bullet-icon {
-            margin-right: 10px;
-            height: 80px;
-            width: 80px;
+            margin-right: 30px;
+            height: 75px;
+            width: 100px;
             align-self: flex-start;
             margin-top: 60px;
-	        margin-right: 25px;
+            margin-left: 0;
+        }
+
+        .mission-text p {
+            text-align: left;
+            margin: 0;
         }
 
         .mission-video {
             flex: 1;
-            margin-left: 40px;
         }
 
+        /* Centered Text Layout for "Our Expertise" Section */
         .expertise-section {
             margin: 40px auto;
             text-align: center;
@@ -300,50 +367,34 @@
             padding: 0 20px;
         }
 
+        /* Flexbox Layout for Construction and Property Management */
         .expertise-content {
             display: flex;
             justify-content: space-between;
-            gap: 80px;
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
-	    align-items: center;
         }
 
-        /* Updated padding for orange boxes */
         .expertise-content > div {
             flex: 1;
-            padding: 50px; /* Reduced padding for a shorter height */
+            padding: 25px;
             background-color: #d8570d;
             color: white;
             border: 2px solid #d8570d;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start; /* Aligns the content to the top */
-      	    text-align: center; /* Ensure the text is centered */
         }
 
         .expertise-content > div h3 {
             margin-bottom: 20px;
             color: white;
-	    text-align: center;
-	    width: 100%; /* Ensures the heading takes up the full width */
-	    display: block; /* Ensures it's treated as a block element */
-	}
-
-        .expertise-content img {
-            margin-right: 5px;
-            vertical-align: middle;
         }
 
-        .expertise-content img:last-child {
-            margin-right: 0px;
-        }
-
-        .image-row {
-            display: flex;
-            justify-content: space-between;
+        .expertise-content > div img {
             margin-top: 20px;
-            margin-left: -32px;
+        }
+
+        .expertise-content > div .gap-between-images {
+            margin-left: 10px;
         }
 
         .heading {
@@ -361,32 +412,35 @@
             text-align: justify;
             margin-left: 50px;
             margin-right: 120px;
-            line-height: 1.4;
+	        line-height: 1.4;
         }
 
         .image-container {
             flex: 1;
-            text-align: right;
-            transform: translateX(-100px);
+	        text-align: right;
+    	    transform: translateX(-100px);
         }
 
         .image-container img {
             width: 100%;
-            margin-left: -40px;
+	        margin-left: -40px;
         }
 
+        /* Black banner for the right paragraph */
         .right-paragraph {
-            background-color: black;
-            color: white;
-            text-align: center;
-            margin: 0 auto;
-            padding: 50px 0;
-            width: 100vw;
-            position: relative;
-            left: calc(-50vw + 50%);
-            box-sizing: border-box;
-        }
+	    background-color: black;
+	    color: white;
+	    text-align: center;
+	    margin: 0 auto;
+	    padding: 50px 0;
+	    width: 100vw;
+	    position: relative;
+	    left: calc(-50vw + 50%);
+	    right: calc(-50vw + 50%);
+	    box-sizing: border-box;
+	}
 
+        /* Container for the bullet points and images */
         .centered-content {
             display: flex;
             align-items: center;
@@ -397,7 +451,7 @@
             color: black;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
-            margin-bottom: calc(-50vw + 50%);
+	        margin-bottom: calc(-50vw + 50%);
             box-sizing: border-box;
             position: relative;
         }
@@ -423,34 +477,32 @@
 
         .left-images-container {
             display: grid;
-            background-color: #d8570d;
+	    background-color: #d8570d;
             padding: 15px;
             grid-template-columns: repeat(2, 1fr);
             gap: 5px;
             width: 450px;
-            margin-right: 125px;
-            margin-left: 75px;
+	    margin-right: 125px;
+	    margin-left: 75px;
         }
-
-        .right-images-container {
-            display: grid;
-            background-color: #d8570d;
+	.right-images-container {
+	    display: grid;
+	    background-color: #d8570d;
             padding: 15px;
             grid-template-columns: repeat(2, 1fr);
             gap: 5px;
             width: 450px;
-            margin-right: 75px;
-            margin-left: 125px;
-        }
+	    margin-right: 75px;
+	    margin-left: 125px;
 
-        .left-images-container img,
-        .right-images-container img {
-            margin-left: -1px;
-            height: 200px;
-        }
-
-        .headingconstruction {
-            background-color: white;
+	}
+	    .left-images-container img, .right-images-container img{
+	     margin-left: -1px;
+	     height: 200px
+	    }
+	
+        .headingconstruction { 
+	    background-color: white;
             color: black;
             width: 100vw;
             padding: 20px 0;
@@ -458,14 +510,13 @@
             margin-left: calc(-50vw + 50%);
             box-sizing: border-box;
             position: relative;
-        }
-
-        .property-management-item {
-            display: flex;
-            justify-content: space-between;
+	    }
+	.property-management-item {
+	    display: flex;
+	    justify-content: space-between;
             align-items: center;
-            margin: 40px 0;
-        }
+	    margin: 40px 0;
+	}
 
         .property-management-item2 {
             display: flex;
@@ -475,46 +526,43 @@
             padding: 50px 0;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
-            box-sizing: border-box;
-            margin-left: 50px;
+            box-sizing: border-box;	
+	        margin-left: 50px;
         }
 
-        .black-background {
-            background-color: black;
-            color: white;
-            padding: 40px;
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
-            box-sizing: border-box;
-            position: relative;
-            margin-bottom: -40px;
-            min-height: calc(100vh - 100px);
-            margin-top: 10px;
-        }
+	    .black-background {
+	        background-color: black;
+	        color: white;
+	        padding: 40px;
+	        width: 100vw;
+	        margin-left: calc(-50vw + 50%);
+	        box-sizing: border-box;
+	        position: relative;
+	        margin-bottom: -40px;
+	        min-height: calc(100vh - 100px);
+		margin-top: 10px;
+	    }
 
-        .bullet-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-        }
+	    .bullet-container {
+	        display: flex;
+	        align-items: center;
+	        justify-content: center;
+	        gap: 50px;
+	    }
 
-        .bullet-text {
-            flex: 1;
-        }
+	    .bullet-text {
+	        flex: 1;
+	    }
 
-        .image-left2,
-        .image-right2 {
-            flex: 1;
-        }
+	    .image-left2, .image-right2 {
+	        flex: 1;
+	    }
 
-        .image-left2 img,
-        .image-right2 img {
-            width: 600px;
-            height: 400px;
-        }
-
-   </style>
+	    .image-left2 img, .image-right2 img {
+	        width: 600px;
+	        height: 400px;
+	    }
+    </style>
 </head>
 <body>
     <div class="header"></div>
@@ -522,7 +570,7 @@
         <a href="#home" onclick="navigateTo('home')">Home</a>
         <a href="#projects" onclick="navigateTo('projects')">Projects</a>
         <a href="#service1" onclick="navigateTo('service1')">General Contracting</a>
-        <a href="#service3" onclick="navigateTo('service3')">Weekly Garbage</a>
+        <a href="#service3" onclick="navigateTo('service3')">Weekly Garbage</a>        
         <img src="muskokalogo.png" alt="Muskoka Logo" width="175" height="120">
         <a href="#service2" onclick="navigateTo('service2')">Property Management</a>
         <a href="#real-estate" onclick="navigateTo('real-estate')">Real Estate</a>
@@ -531,7 +579,7 @@
     </div>
 
     <div class="content">
-         <div id="home" class="section-main">
+        <div id="home" class="section-main">
             <div class="stone-background">
                 <h1><br />About Us</h1>
             </div>
@@ -549,7 +597,7 @@
                     </div>
                 </div>
                 <div class="mission-video">
-                    <video id="home-video" width="500" height="300" controls muted>
+                    <video id="home-video" width="500" height="300" controls>
                         <source src="Norms.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -563,23 +611,18 @@
 
             <div class="expertise-content">
                 <div class="construction">
-                   <h3>Construction</h3>
+                   <center><h3>Construction</h3></center>
                     <p>Our team’s dedication to craftsmanship ensures that every aspect of your project is executed with precision and care from initial concept to successful completion, reflecting the natural beauty and charm of Muskoka in every detail.</p>
-                    <!-- Adjusted Bedroom and Bathroom images with gap -->
-                    <div class="image-row">
-                        <img src="Bedroom.png" alt="Bedroom" width="290" height="200">
-                        <img src="bathroom.png" width="225" height="225">
-                    </div>
+                    <center><img src="Bedroom.png" alt="Bedroom" width="290" height="200"><img src="bathroom.png" width="225" height="200" class="gap-between-images"></center>
                 </div>
 
-                <div class="property-management">
-                     <h3>Property Management</h3> 
+         <div class="property-management">
+            <center> <h3>Property Management</h3> </center>
                     <p>Our expertise includes a variety of comprehensive property management services, meaning we will handle any project big or small to ensure that your property remains pristine and well-maintained throughout the year to allow you to relax and enjoy Muskoka’s tranquility.</p>
-                    <!-- Adjusted Golf Ball and Green images side by side with gap -->
-                    <div class="image-row">
-                        <img src="golfball.png" alt="Golf Ball" width="260" height="150">
-                        <img src="green.png" alt="Green" width="260" height="150">
-                    </div>
+                    <center>
+                        <img src="golfball.png" alt="Golf Ball" width="193" height="150">
+                        <img src="green.png" alt="Green" width="327" height="180" class="gap-between-images">
+                    </center>
                 </div>
             </div>
 	 </div>   
@@ -690,7 +733,7 @@
 </div>
 
         <div id="service3" class="section-fourmain">
-            <img src="MuskokaDockside.png" alt="Muskoka Dockside Logo" width="400" height="400">
+            <img src="MuskokaDockside.PNG" alt="Muskoka Dockside Logo" width="400" height="400">
             <p>Islanders, <br /><br /> 
                As you may be aware, the Town of Bracebridge and the District of Muskoka have made plans to remove household garbage and recycling bins from local marinas. Over the past few seasons, Muskoka Dockside has been providing a convenient weekly garbage and recycling pickup service for a number of island residents in preparation for these changes.<br /><br />
                We are excited to offer our reliable and efficient weekly household garbage and recycling pickup service, which includes a visit to your dock each week to collect your household waste and then barge it away for proper disposal.<br /><br />
@@ -718,22 +761,30 @@
         </div>
 
         <div id="real-estate" class="section-fivemain real-estate-header">
-            <h1>Real Estate</h1>
-            <img src="Brendan.png" alt="Brendan">
-            <p>Sales Representative and co-founder of Muskoka Improvements, Brendan Mizzen is a dedicated real estate professional. Brendan’s specialized training coupled with expert knowledge of Lake Muskoka serves as a tremendous asset when helping you find your dream Muskoka property. Since a young age Brendan has been a seasonal cottager in Muskoka at his family’s cottage on Lake Rosseau spending his summers discovering why we all love Muskoka. Since 2015, Brendan has been an island resident on Lake Muskoka, with vast familiarity of the lake Brendan can provide you with quality advice and representation to buy or sell your Muskoka island property.</p>
+            <h1 style="margin-left: 50px; margin-top: 20px;">Real Estate</h1>
+            <img src="Brendan.png" alt="Brendan" style="float: right; margin-right: 50px; margin-top: -20px; width: 300px; height: 400px;">
+            <p style="margin: 20px 50px 40px 50px; line-height: 1.6;">
+                Sales Representative and co-founder of Muskoka Improvements, Brendan Mizzen is a dedicated real estate professional. Brendan’s specialized training coupled with expert knowledge of Lake Muskoka serves as a tremendous asset when helping you find your dream Muskoka property. Since a young age Brendan has been a seasonal cottager in Muskoka at his family’s cottage on Lake Rosseau spending his summers discovering why we all love Muskoka. Since 2015, Brendan has been an island resident on Lake Muskoka, with vast familiarity of the lake Brendan can provide you with quality advice and representation to buy or sell your Muskoka island property.
+            </p>
         </div>
 
         <div id="projects" class="section-sixmain">
             <center><h2>Our Projects</h2></center>
-            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/f152e168e85e569681b2aae76683d1d3.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+	   <center> <iframe src="https://cdn.lightwidget.com/widgets/f152e168e85e569681b2aae76683d1d3.html" 
+            scrolling="no" 
+            allowtransparency="true" 
+            class="lightwidget-widget" 
+            style="width:95%;border:0;overflow:hidden; margin: 0 auto;"></center>
+    </iframe>
         </div>
 
         <div id="careers" class="section-sevenmain">
-            <h2>Careers</h2>
-            <center> <p>At Muskoka Improvements we are actively seeking individuals with construction and property management skills and experience to join our team. Reach out to us today at <a href="mailto:work@muskokaimprovements.com">work@muskokaimprovements.com</a> for more information!</p></center>
+            <h1 style="text-align: center;">Careers</h1>
+            <center><p style="max-width: 1000px; margin: 0 auto; line-height: 1.6; margin-bottom: 20px;">
+                At Muskoka Improvements we are actively seeking individuals with construction and property management skills and experience to join our team. Reach out to us today at <a href="mailto:work@muskokaimprovements.com">work@muskokaimprovements.com</a> for more information!
+            </p></center>
         </div>
-
-
     </div>
 
     <div id="footer" class="footer">
@@ -741,7 +792,7 @@
             <div class="footer-text">
                 <p>&copy; 2019 Muskoka Improvements. All rights reserved.</p>
                 <div class="instagram-footer">
-                    <img src="instagram.png" alt="Instagram">
+                    <img src="Instagram.png" alt="Instagram">
                     <a href="https://www.instagram.com/muskokaimprovements/" target="_blank">@muskokaimprovements</a>
                 </div>
                 <div class="phone-footer">
@@ -752,11 +803,11 @@
                     <img src="mail.png" alt="Mail Symbol">
                     <p><a href="mailto:work@muskokaimprovements.com">work@muskokaimprovements.com</a></p>
                 </div>
-            </div>
+		</div>
             <img src="muskokalogo.png" width="400" height="400" alt="Muskoka Logo">
         </div>
-    </div>
-   	<div id="footer-real-estate" class="footer" style="display: none;">
+	</div>
+    <div id="footer-real-estate" class="footer" style="display: none;">
         <h3 class="real-estate-footer-heading">Interested in Real Estate?</h3>
         <div class="real-estate-footer">
             <p>Brendan Mizzen, Sales Representative<br />
@@ -769,93 +820,78 @@
         </div>
     </div>
 
-
     <script>
-       document.addEventListener('DOMContentLoaded', function () {
-    const video = document.getElementById('home-video');
+         document.addEventListener('DOMContentLoaded', function() {
+            var hash = window.location.hash.substring(1);
+            if (hash) {
+                showSection(hash);
+            } else {
+                showSection('home');
+            }
 
-    // Function to play video if it's in view
-    function playVideoIfInView() {
-        const rect = video.getBoundingClientRect();
-        const isInView = (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-
-        if (isInView) {
-            video.play().catch(err => {
-                console.error('Failed to play the video: ', err);
-            });
-        } else {
-            video.pause();
-        }
-    }
-
-    // Intersection Observer to monitor when video comes into view
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                video.play().catch(err => {
-                    console.error('Failed to play the video: ', err);
+            // Intersection Observer for video autoplay
+            const video = document.getElementById('home-video');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
                 });
+            });
+
+            observer.observe(video);
+
+            // Play video if it is already in view when page is refreshed
+            checkVideoInView(video);
+
+            window.addEventListener('scroll', () => {
+                checkVideoInView(video);
+            });
+        });
+
+        function checkVideoInView(video) {
+            const rect = video.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                video.play();
             } else {
                 video.pause();
             }
-        });
-    });
+        }
 
-    observer.observe(video);
+        function navigateTo(targetId) {
+            showSection(targetId);
+            window.location.hash = targetId;
+        }
 
-    // Call playVideoIfInView on load to ensure it plays if already visible
-    window.addEventListener('load', playVideoIfInView);
+        function showSection(sectionId) {
+            document.querySelectorAll('.section-main, .section-twomain, .section-threemain, .section-fourmain, .section-fivemain, .section-sixmain, .section-sevenmain, .section-eightmain').forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            if (sectionId === 'real-estate') {
+                document.getElementById('footer').style.display = 'none';
+                document.getElementById('footer-real-estate').style.display = 'flex';
+            } else {
+                document.getElementById('footer').style.display = 'flex';
+                document.getElementById('footer-real-estate').style.display = 'none';
+            }
+            if (sectionId !== 'contact') {
+                setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+                }, 0); // Slight delay to ensure the section is visible
+            }
+        }
 
-    // Call playVideoIfInView on scroll to ensure it plays when in view
-    window.addEventListener('scroll', playVideoIfInView);
-
-    // Call playVideoIfInView on resize to ensure it adapts to window size changes
-    window.addEventListener('resize', playVideoIfInView);
-
-    // Navigation handling
-    var hash = window.location.hash.substring(1);
-    if (hash) {
-        showSection(hash);
-    } else {
-        showSection('home');
-    }
-});
-
-function navigateTo(targetId) {
-    showSection(targetId);
-    window.location.hash = targetId;
-}
-
-function showSection(sectionId) {
-    document.querySelectorAll('.section-main, .section-twomain, .section-threemain, .section-fourmain, .section-fivemain, .section-sixmain, .section-sevenmain, .section-eightmain').forEach(section => section.classList.remove('active'));
-    document.getElementById(sectionId).classList.add('active');
-    if (sectionId === 'real-estate') {
-        document.getElementById('footer').style.display = 'none';
-        document.getElementById('footer-real-estate').style.display = 'flex';
-    } else {
-        document.getElementById('footer').style.display = 'flex';
-        document.getElementById('footer-real-estate').style.display = 'none';
-    }
-    if (sectionId !== 'contact') {
-        setTimeout(() => {
-            window.scrollTo({ top: 0, behavior: 'instant' });
-        }, 0);
-    }
-}
-
-function scrollToBottom() {
-    const activeSection = document.querySelector('.content .active');
-    if (activeSection) {
-        activeSection.scrollIntoView({ behavior: 'smooth', block: 'end' });
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
-}
-
+        function scrollToBottom() {
+            const realEstateFooter = document.getElementById('footer-real-estate');
+            const generalFooter = document.getElementById('footer');
+            
+            if (realEstateFooter.style.display === 'flex') {
+                realEstateFooter.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            } else {
+                generalFooter.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            }
+        }
     </script>
 </body>
 </html>
