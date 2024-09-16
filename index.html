@@ -655,7 +655,7 @@
 
             /* Adjust bullet-point text size to avoid alignment issues */
             .bullet-point-list li {
-                font-size: 10px; 
+                font-size: 8px; 
             }
         }
 
@@ -663,11 +663,13 @@
         @media screen and (max-width: 768px) {
             .header {
                 padding: 80px;
+                text-align: center; /* Center the header for better visibility */
             }
 
             .navbar {
-                position: relative;
-                top: -20px; /* Ensure navbar stays on top */
+                position: fixed; /* Make the navbar fixed */
+                top: 0;
+                width: 100%;
             }
 
             .navbar a {
@@ -822,6 +824,7 @@
         @media screen and (max-width: 480px) {
             .header {
                 padding: 60px;
+                text-align: center;
             }
 
             .navbar a {
