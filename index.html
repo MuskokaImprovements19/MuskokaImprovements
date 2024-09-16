@@ -484,7 +484,7 @@
             gap: 5px;
             width: 450px;
             margin-right: 125px;
-            margin-left: 75px;
+            margin-left: 55px;
         }
 
         .right-images-container {
@@ -494,8 +494,8 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 5px;
             width: 450px;
-            margin-right: 75px;
-            margin-left: 135px;
+            margin-right: 55px;
+            margin-left: 125px;
         }
 
         .left-images-container img, .right-images-container img {
@@ -666,10 +666,6 @@
                 text-align: center;
             }
 
-            .navbar {
-                top: -10px;
-            }
-
             .navbar a {
                 padding: 6px;
                 font-size: 8px;
@@ -697,8 +693,12 @@
                 flex-direction: column;
             }
 
-            .stone-background, .green-background {
-                padding: 60px 0;
+            .stone-background {
+                padding: 50px 0; /* Reduced padding for phone screens */
+            }
+
+            .green-background {
+                padding: 50px 0; /* Reduced padding for phone screens */
             }
 
             .pickup-details {
@@ -708,24 +708,23 @@
             .expertise-content {
                 flex-direction: column;
                 gap: 15px;
-                /* Slightly move the "Our Expertise" content to the left */
                 margin-left: 10px;
             }
 
             /* Center the text in General Contracting and move the kitchen image below */
             .construction-content {
-                flex-direction: column; /* Stack the content vertically */
-                text-align: center; /* Center the text */
+                flex-direction: column;
+                text-align: center;
             }
 
             .image-container {
                 text-align: center;
-                transform: none; /* Remove the translateX transformation */
-                margin-top: 20px; /* Add space above the image */
+                transform: none;
+                margin-top: 20px;
             }
 
             .image-container img {
-                width: 80%; /* Adjust image width for mobile screens */
+                width: 80%;
                 margin: 0 auto;
             }
 
@@ -762,6 +761,10 @@
                 font-size: 16px;
             }
 
+            .mission-video {
+                margin-top: 20px; /* Added space for the video below the text */
+            }
+
             .mission-video video {
                 width: 100%;
             }
@@ -795,7 +798,7 @@
                 background-color: black;
                 position: relative;
                 margin-left: calc(-50vw + 50%);
-                max-width: 100vw;
+                max-width: 90vw;
             }
 
             .navbar img {
@@ -911,7 +914,7 @@
                 background-color: black;
                 position: relative;
                 margin-left: calc(-50vw + 50%);
-                max-width: 100vw;
+                max-width: 90vw;
             }
 
             .navbar img {
