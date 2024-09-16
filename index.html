@@ -6,7 +6,7 @@
     <title>Muskoka Improvements</title>
     <link rel="icon" href="mlogo.png" type="image/png">
     <style>
-         body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -35,7 +35,7 @@
             justify-content: center;
             align-items: center;
             position: sticky;
-            top: 0px;
+            top: 0;
             z-index: 999;
         }
 
@@ -468,7 +468,7 @@
             padding: 0;
             margin: 0;
             flex: 1;
-	    margin-left: -10px;
+            margin-left: -10px;
         }
 
         .bullet-point-list li {
@@ -652,12 +652,22 @@
                 width: 100%;
                 height: auto;
             }
+
+            /* Adjust bullet-point text size to avoid alignment issues */
+            .bullet-point-list li {
+                font-size: 14px; 
+            }
         }
 
         /* For Phones */
         @media screen and (max-width: 768px) {
             .header {
                 padding: 80px;
+            }
+
+            .navbar {
+                position: relative;
+                top: 0; /* Ensure navbar stays on top */
             }
 
             .navbar a {
