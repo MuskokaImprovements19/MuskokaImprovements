@@ -29,14 +29,14 @@
         }
 
         .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 999;
+            overflow: hidden;
             background-color: black;
             display: flex;
             justify-content: center;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 999;
         }
 
         .navbar a {
@@ -66,7 +66,6 @@
             margin: 20px;
             border-radius: 10px;
             flex: 1;
-            margin-top: 160px; /* Added margin to prevent content hiding behind navbar */
         }
 
         .section-main, .section-twomain, .section-threemain, .section-fourmain, .section-fivemain, .section-sixmain, .section-sevenmain, .section-eightmain {
@@ -667,7 +666,8 @@
             }
 
             .navbar {
-                top: 0;
+                position: relative;
+                top: -20px; /* Ensure navbar stays on top */
             }
 
             .navbar a {
@@ -1240,6 +1240,7 @@ function scrollToBottom() {
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
 }
+
     </script>
 </body>
 </html>
