@@ -468,6 +468,7 @@
             padding: 0;
             margin: 0;
             flex: 1;
+	    margin-left: -10px;
         }
 
         .bullet-point-list li {
@@ -661,7 +662,7 @@
 
             .navbar a {
                 padding: 6px;
-                font-size: 12px;
+                font-size: 8px;
             }
 
             .content {
@@ -704,8 +705,15 @@
                 align-items: center;
             }
 
+            /* Place Mission Video under Mission Text */
+            .mission-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
             .mission-video {
                 width: 100%;
+                margin-top: 20px;
             }
 
             .section-fourmain img {
@@ -780,6 +788,9 @@
                 padding: 20px;
                 margin-right: 0;
                 margin-bottom: 20px;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
             }
 
             .real-estate-footer p {
@@ -788,7 +799,12 @@
             }
 
             .image-container img {
-                margin-left: 0;
+                margin-left: 20px;
+            }
+
+            .real-estate-footer img {
+                width: 100px;
+                height: auto;
             }
         }
 
@@ -800,7 +816,7 @@
 
             .navbar a {
                 padding: 4px;
-                font-size: 10px;
+                font-size: 6px;
             }
 
             .content {
@@ -881,6 +897,9 @@
                 padding: 20px;
                 margin-right: 0;
                 margin-bottom: 20px;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
             }
 
             .real-estate-footer p {
@@ -888,8 +907,13 @@
                 text-align: center;
             }
 
+            .real-estate-footer img {
+                width: 100px;
+                height: auto;
+            }
+
             .image-container img {
-                margin-left: 0;
+                margin-left: 20px;
             }
         }
     </style>
