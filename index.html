@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-x: hidden;
         }
         .header {
             background-image: url('background11.png');
@@ -569,11 +569,6 @@
                 font-size: 14px;
             }
 
-            .navbar img {
-                width: 120px; /* Smaller logo for tablets */
-                height: 80px;
-            }
-
             .content {
                 padding: 10px;
                 margin: 10px;
@@ -624,6 +619,11 @@
                 flex-direction: column;
             }
 
+            .navbar img {
+                width: 120px;
+                height: 80px;
+            }
+
             .expertise-content > div {
                 margin: 10px 0;
                 padding: 10px;
@@ -652,12 +652,7 @@
 
             .navbar a {
                 padding: 6px;
-                font-size: 12px; /* Smaller font size for better fit */
-            }
-
-            .navbar img {
-                width: 100px; /* Further reduced logo for mobile */
-                height: 60px;
+                font-size: 12px;
             }
 
             .content {
@@ -752,6 +747,21 @@
             .expertise-section h2, .headingconstruction h3, .real-estate-footer-heading {
                 font-size: 18px;
             }
+
+            /* Reduce founded text size and black background */
+            .founded-text {
+                font-size: 14px;
+                padding: 20px;
+                margin-left: 0;
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .navbar img {
+                width: 80px;
+                height: 60px;
+            }
         }
 
         /* For Very Small Phones */
@@ -763,11 +773,6 @@
             .navbar a {
                 padding: 4px;
                 font-size: 10px;
-            }
-
-            .navbar img {
-                width: 80px; /* Smallest logo for very small phones */
-                height: 50px;
             }
 
             .content {
@@ -823,6 +828,21 @@
 
             .expertise-section h2, .headingconstruction h3, .real-estate-footer-heading {
                 font-size: 16px;
+            }
+
+            /* Reduce founded text size and black background */
+            .founded-text {
+                font-size: 12px;
+                padding: 15px;
+                margin-left: 0;
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .navbar img {
+                width: 70px;
+                height: 50px;
             }
 
             .mission-video {
