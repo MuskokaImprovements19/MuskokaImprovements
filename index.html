@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         .header {
             background-image: url('background11.png');
@@ -569,6 +569,11 @@
                 font-size: 14px;
             }
 
+            .navbar img {
+                width: 120px; /* Smaller logo for tablets */
+                height: 80px;
+            }
+
             .content {
                 padding: 10px;
                 margin: 10px;
@@ -619,11 +624,6 @@
                 flex-direction: column;
             }
 
-            .navbar img {
-                width: 120px;
-                height: 80px;
-            }
-
             .expertise-content > div {
                 margin: 10px 0;
                 padding: 10px;
@@ -652,7 +652,12 @@
 
             .navbar a {
                 padding: 6px;
-                font-size: 12px;
+                font-size: 12px; /* Smaller font size for better fit */
+            }
+
+            .navbar img {
+                width: 100px; /* Further reduced logo for mobile */
+                height: 60px;
             }
 
             .content {
@@ -760,6 +765,11 @@
                 font-size: 10px;
             }
 
+            .navbar img {
+                width: 80px; /* Smallest logo for very small phones */
+                height: 50px;
+            }
+
             .content {
                 padding: 3px;
                 margin: 3px;
@@ -813,11 +823,6 @@
 
             .expertise-section h2, .headingconstruction h3, .real-estate-footer-heading {
                 font-size: 16px;
-            }
-
-            .navbar img {
-                width: 100px;
-                height: 60px;
             }
 
             .mission-video {
