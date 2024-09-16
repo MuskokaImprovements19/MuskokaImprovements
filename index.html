@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Muskoka Improvements - Construction, Property Management, and Waste Disposal Services">
     <title>Muskoka Improvements</title>
+	<link rel="icon" href="mlogo.png" type="image/png">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -83,9 +84,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1px; /* Reduced gap between Instagram, phone, and email */
+            gap: 1px;
         }
-        
+
         .footer-text {
             display: flex;
             flex-direction: column;
@@ -96,11 +97,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 2px 0; /* Reduced the margin to decrease vertical spacing */
+            margin: 2px 0;
         }
 
         .instagram-footer img, .phone-footer img, .mail-footer img {
-            margin-right: 5px; /* Reduced the space between the icon and the text */
+            margin-right: 5px;
             width: 30px;
             height: 30px;
         }
@@ -115,7 +116,6 @@
             text-decoration: underline;
         }
 
-        /* Make images responsive */
         img {
             max-width: 100%;
             height: auto;
@@ -206,16 +206,15 @@
             color: #d8570d;
         }
 
-        /* Property Management Layout */
         .property-management-content {
             display: flex;
         }
 
         .property-management-text {
             flex: 1;
-	    margin-top: 40px;
+            margin-top: 40px;
             margin-right: 40px;
-	    line-height: 1.5;
+            line-height: 1.5;
         }
 
         .property-management-images {
@@ -234,7 +233,6 @@
             grid-column: span 2;
         }
 
-        /* New background styling for the first paragraph */
         .highlighted-paragraph {
             background-color: #d8570d;
             color: white;
@@ -244,14 +242,13 @@
             width: 100vw;
             margin-left: calc(-50vw + 50%);
             box-sizing: border-box;
-	    margin-top: -50px
+            margin-top: -50px
         }
-	.highlighted-paragraph p {
-	    margin-right: 20px;
-	    margin-left: 20px;
-	}
+        .highlighted-paragraph p {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
 
-        /* Stone Background for Home Section */
         .stone-background {
             background-image: url('stonebackground.png');
             background-size: cover;
@@ -268,40 +265,39 @@
             overflow-x: hidden;
         }
 
-	.green-background {
-	    position: relative;
-	    background-image: url('green.png');
-	    background-size: cover;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    padding: 200px 0;
-	    text-align: center;
-	    color: white;
-	    width: 100vw;
-	    margin-left: calc(-50vw + 50%);
-	    position: relative;
-	    left: 0;
-	    top: -40px;
-	    overflow-x: hidden;
-	}
-	
-	.green-background::before {
-	    content: '';
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    width: 100%;
-	    height: 100%;
-	    background-color: rgba(0, 0, 0, 0.5);
-	    z-index: 1;
-	}
+        .green-background {
+            position: relative;
+            background-image: url('green.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 200px 0;
+            text-align: center;
+            color: white;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            position: relative;
+            left: 0;
+            top: -40px;
+            overflow-x: hidden;
+        }
 
-	.green-background h2 {
-	    position: relative;
-	    z-index: 2;
-	}
+        .green-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
 
-        /* Updated styles for black background section */
+        .green-background h2 {
+            position: relative;
+            z-index: 2;
+        }
+
         .founded-text {
             background-color: black;
             color: white;
@@ -317,7 +313,6 @@
             width: 2000vw;
         }
 
-        /* Flexbox Layout for "Our Mission" Section */
         .mission-section {
             display: flex;
             align-items: flex-start;
@@ -358,7 +353,6 @@
             flex: 1;
         }
 
-        /* Centered Text Layout for "Our Expertise" Section */
         .expertise-section {
             margin: 40px auto;
             text-align: center;
@@ -367,7 +361,6 @@
             padding: 0 20px;
         }
 
-        /* Flexbox Layout for Construction and Property Management */
         .expertise-content {
             display: flex;
             justify-content: space-between;
@@ -412,35 +405,33 @@
             text-align: justify;
             margin-left: 50px;
             margin-right: 120px;
-	        line-height: 1.4;
+            line-height: 1.4;
         }
 
         .image-container {
             flex: 1;
-	        text-align: right;
-    	    transform: translateX(-100px);
+            text-align: right;
+            transform: translateX(-100px);
         }
 
         .image-container img {
             width: 100%;
-	        margin-left: -40px;
+            margin-left: -40px;
         }
 
-        /* Black banner for the right paragraph */
         .right-paragraph {
-	    background-color: black;
-	    color: white;
-	    text-align: center;
-	    margin: 0 auto;
-	    padding: 50px 0;
-	    width: 100vw;
-	    position: relative;
-	    left: calc(-50vw + 50%);
-	    right: calc(-50vw + 50%);
-	    box-sizing: border-box;
-	}
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin: 0 auto;
+            padding: 50px 0;
+            width: 100vw;
+            position: relative;
+            left: calc(-50vw + 50%);
+            right: calc(-50vw + 50%);
+            box-sizing: border-box;
+        }
 
-        /* Container for the bullet points and images */
         .centered-content {
             display: flex;
             align-items: center;
@@ -451,7 +442,7 @@
             color: black;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
-	        margin-bottom: calc(-50vw + 50%);
+            margin-bottom: calc(-50vw + 50%);
             box-sizing: border-box;
             position: relative;
         }
@@ -477,32 +468,33 @@
 
         .left-images-container {
             display: grid;
-	    background-color: #d8570d;
+            background-color: #d8570d;
             padding: 15px;
             grid-template-columns: repeat(2, 1fr);
             gap: 5px;
             width: 450px;
-	    margin-right: 125px;
-	    margin-left: 75px;
+            margin-right: 125px;
+            margin-left: 75px;
         }
-	.right-images-container {
-	    display: grid;
-	    background-color: #d8570d;
+
+        .right-images-container {
+            display: grid;
+            background-color: #d8570d;
             padding: 15px;
             grid-template-columns: repeat(2, 1fr);
             gap: 5px;
             width: 450px;
-	    margin-right: 75px;
-	    margin-left: 125px;
+            margin-right: 75px;
+            margin-left: 125px;
+        }
 
-	}
-	    .left-images-container img, .right-images-container img{
-	     margin-left: -1px;
-	     height: 200px
-	    }
-	
+        .left-images-container img, .right-images-container img {
+            margin-left: -1px;
+            height: 200px;
+        }
+
         .headingconstruction { 
-	    background-color: white;
+            background-color: white;
             color: black;
             width: 100vw;
             padding: 20px 0;
@@ -510,13 +502,14 @@
             margin-left: calc(-50vw + 50%);
             box-sizing: border-box;
             position: relative;
-	    }
-	.property-management-item {
-	    display: flex;
-	    justify-content: space-between;
+        }
+
+        .property-management-item {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-	    margin: 40px 0;
-	}
+            margin: 40px 0;
+        }
 
         .property-management-item2 {
             display: flex;
@@ -526,42 +519,269 @@
             padding: 50px 0;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
-            box-sizing: border-box;	
-	        margin-left: 50px;
+            box-sizing: border-box;
+            margin-left: 50px;
         }
 
-	    .black-background {
-	        background-color: black;
-	        color: white;
-	        padding: 40px;
-	        width: 100vw;
-	        margin-left: calc(-50vw + 50%);
-	        box-sizing: border-box;
-	        position: relative;
-	        margin-bottom: -40px;
-	        min-height: calc(100vh - 100px);
-		margin-top: 10px;
-	    }
+        .black-background {
+            background-color: black;
+            color: white;
+            padding: 40px;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            box-sizing: border-box;
+            position: relative;
+            margin-bottom: -40px;
+            min-height: calc(100vh - 100px);
+            margin-top: 10px;
+        }
 
-	    .bullet-container {
-	        display: flex;
-	        align-items: center;
-	        justify-content: center;
-	        gap: 50px;
-	    }
+        .bullet-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
 
-	    .bullet-text {
-	        flex: 1;
-	    }
+        .bullet-text {
+            flex: 1;
+        }
 
-	    .image-left2, .image-right2 {
-	        flex: 1;
-	    }
+        .image-left2, .image-right2 {
+            flex: 1;
+        }
 
-	    .image-left2 img, .image-right2 img {
-	        width: 600px;
-	        height: 400px;
-	    }
+        .image-left2 img, .image-right2 img {
+            width: 600px;
+            height: 400px;
+        }
+
+        /* Responsive Media Queries */
+
+        /* For Tablets (iPads) */
+        @media screen and (max-width: 1024px) {
+            .header {
+                padding: 180px;
+            }
+
+            .navbar a {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .content {
+                padding: 10px;
+                margin: 10px;
+            }
+
+            .expertise-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .property-management-images img {
+                height: auto;
+            }
+
+            .property-management-text {
+                margin: 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .property-management-content {
+                flex-direction: column;
+            }
+
+            .stone-background, .green-background {
+                padding: 100px 0;
+            }
+
+            .pickup-details {
+                margin: 20px;
+            }
+
+            .mission-text h2, .expertise-section h2, .headingconstruction h3 {
+                font-size: 22px;
+            }
+
+            .section-fourmain img {
+                max-width: 70%;
+            }
+        }
+
+        /* For Phones */
+        @media screen and (max-width: 768px) {
+            .header {
+                padding: 120px;
+            }
+
+            .navbar a {
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            .content {
+                padding: 5px;
+                margin: 5px;
+            }
+
+            .property-management-images img {
+                height: 200px;
+            }
+
+            .property-management-text {
+                margin: 10px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .property-management-content {
+                flex-direction: column;
+            }
+
+            .stone-background, .green-background {
+                padding: 80px 0;
+            }
+
+            .pickup-details {
+                margin: 10px;
+            }
+
+            .expertise-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .mission-text {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mission-video {
+                width: 100%;
+            }
+
+            .section-fourmain img {
+                max-width: 100%;
+            }
+
+            .property-management-item2 {
+                flex-direction: column;
+                padding: 20px 0;
+            }
+
+            .bullet-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .image-left2 img, .image-right2 img {
+                width: 100%;
+                height: auto;
+            }
+
+            .left-paragraph, .right-paragraph {
+                margin: 0;
+            }
+
+            .left-images-container, .right-images-container {
+                width: 100%;
+                margin: 10px;
+            }
+
+            .bullet-point-list li {
+                font-size: 16px;
+            }
+
+            .mission-video video {
+                width: 100%;
+            }
+
+            .footer-text {
+                text-align: center;
+            }
+
+            .section-sevenmain p {
+                font-size: 14px;
+            }
+
+            .expertise-section h2, .headingconstruction h3, .real-estate-footer-heading {
+                font-size: 18px;
+            }
+        }
+
+        /* For Very Small Phones */
+        @media screen and (max-width: 480px) {
+            .header {
+                padding: 80px;
+            }
+
+            .navbar a {
+                padding: 6px;
+                font-size: 10px;
+            }
+
+            .content {
+                padding: 3px;
+                margin: 3px;
+            }
+
+            .property-management-images img {
+                height: 150px;
+            }
+
+            .property-management-text {
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            .footer-content {
+                gap: 5px;
+            }
+
+            .stone-background, .green-background {
+                padding: 60px 0;
+            }
+
+            .expertise-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .pickup-details {
+                margin: 5px;
+            }
+
+            .footer-text p {
+                font-size: 12px;
+            }
+
+            .property-management-item2 {
+                padding: 10px 0;
+            }
+
+            .image-left2 img, .image-right2 img {
+                width: 100%;
+            }
+
+            .left-paragraph, .right-paragraph {
+                font-size: 14px;
+            }
+
+            .section-sevenmain p {
+                font-size: 12px;
+            }
+
+            .expertise-section h2, .headingconstruction h3, .real-estate-footer-heading {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -625,7 +845,7 @@
                     </center>
                 </div>
             </div>
-	 </div>   
+        </div>   
         <div id="service1" class="section-twomain">
             <div class="heading">
                 <h2>Our Construction Services</h2>
@@ -638,14 +858,14 @@
                 <div class="image-container">
                     <img src="kitchen.png" alt="Kitchen">
                 </div>
-		</div>
-                <div class="right-paragraph">
-                    <p>We offer comprehensive solutions that include site preparation, structural work, interior finishes, and project management. Our commitment to quality craftsmanship, timely completion, and clear communication ensures that your construction project is completed to the highest standards, meeting your needs and exceeding your expectations.</p>
-                </div>
-		<div class="headingconstruction">
-            	<h3>Our construction services include, but are not limited to:</h3>
-	</div>
-	    <div class="centered-content">
+            </div>
+            <div class="right-paragraph">
+                <p>We offer comprehensive solutions that include site preparation, structural work, interior finishes, and project management. Our commitment to quality craftsmanship, timely completion, and clear communication ensures that your construction project is completed to the highest standards, meeting your needs and exceeding your expectations.</p>
+            </div>
+            <div class="headingconstruction">
+                <h3>Our construction services include, but are not limited to:</h3>
+            </div>
+            <div class="centered-content">
                 <div class="left-images-container">
                     <img src="boathouse.png" alt="Boathouse 1">
                     <img src="boathouse1.png" alt="Boathouse 2">
@@ -676,22 +896,20 @@
                 <h2>Our Property Management Services</h2>
             </div>
 
-            <!-- Added Text -->
             <div class="highlighted-paragraph">
                 <p>
                     At Muskoka Improvements, we offer a full spectrum of comprehensive property management and maintenance services to ensure your property remains in excellent condition. From handling routine maintenance and repairs to managing any task big or small, we do it all! With a focus on responsiveness, reliability, and excellence, we manage your property as if it were our own, discover hassle-free maintenance solutions that allow you to enjoy your property with peace of mind.
                 </p>
             </div>
 
-            <!-- Updated structure -->
             <div class="property-management-content">
                 <div class="property-management-text">
                     <p>
                         What sets Muskoka Improvements apart is our unwavering commitment to our clients. We take pride in our ability to offer a comprehensive range of services under one roof, this means that we will handle any and all tasks revolving around the management of your property. By offering a variety of services under one roof we have simplified the process for our clients as we are the direct point of contact to get any type of job done and ensuring a consistent standard of excellence across all our offerings. Our approach is personalized, our solutions are innovative, and our dedication to quality is unmatched.
                     </p>
-			<br /><br />
-			<hr style="border: none; border-top: 15px solid #d8570d; width: 100%;">
-			<br /><br />
+                    <br /><br />
+                    <hr style="border: none; border-top: 15px solid #d8570d; width: 100%;">
+                    <br /><br />
 
                     <p>
                         Our skilled team handles a wide array of tasks, including weekly maintenance, preventive maintenance, and urgent repairs, ensuring your property remains in pristine condition year-round. From plumbing and electrical work to construction and landscaping, we provide prompt expert solutions tailored to your property’s needs. Our commitment to high-quality service and timely response means you can trust us to maintain your property’s value and functionality, giving you peace of mind and allowing you to focus on what matters most.
@@ -704,33 +922,32 @@
                     <img src="dock2.png" alt="Dock2 Image">
                 </div>
             </div>
-            <!-- End updated structure -->
 
-<div class="black-background">
-	        <center><h3>We provide a full range of property management and maintenance services that includes, but are not limited to:</h3></center>
-    <div class="bullet-container">
-        <div class="image-left2">
-            <img src="raven.png" alt="Raven">
+            <div class="black-background">
+                <center><h3>We provide a full range of property management and maintenance services that includes, but are not limited to:</h3></center>
+                <div class="bullet-container">
+                    <div class="image-left2">
+                        <img src="raven.png" alt="Raven">
+                    </div>
+                    <div class="bullet-text">
+                        <center>
+                            <li>Weekly Maintenance</li><br /><br />
+                            <li>Preventative Maintenance</li><br /><br />
+                            <li>Landscaping</li><br /><br />
+                            <li>Year-Round Check-ups</li><br /><br />
+                            <li>Full-Service Property Management</li><br /><br />
+                            <li>Waste Disposal</li><br /><br />
+                            <li>Repairs</li>
+                        </center>
+                    </div>
+                    <div class="image-right2">
+                        <img src="fireplace.png" alt="Fireplace">
+                    </div>
+                </div>
+                <center><h3>Relax, we’ve got you covered.</h3>
+                <p>Our team of professionals are here to help make your Muskoka living experience simplified.</p></center>
+            </div>    
         </div>
-        <div class="bullet-text">
-            <center>
-                    <li>Weekly Maintenance</li><br /><br />
-                    <li>Preventative Maintenance</li><br /><br />
-                    <li>Landscaping</li><br /><br />
-                    <li>Year-Round Check-ups</li><br /><br />
-                    <li>Full-Service Property Management</li><br /><br />
-                    <li>Waste Disposal</li><br /><br />
-                    <li>Repairs</li>
-            </center>
-        </div>
-        <div class="image-right2">
-            <img src="fireplace.png" alt="Fireplace">
-        </div>
-    </div>
-	<center><h3>Relax, we’ve got you covered.</h3>
-            <p>Our team of professionals are here to help make your Muskoka living experience simplified.</p></center>
-</div>    
-</div>
 
         <div id="service3" class="section-fourmain">
             <img src="MuskokaDockside.PNG" alt="Muskoka Dockside Logo" width="400" height="400">
@@ -757,7 +974,6 @@
                 </div>    
             </div>
                 
-            </div>
         </div>
 
         <div id="real-estate" class="section-fivemain real-estate-header">
@@ -771,12 +987,12 @@
         <div id="projects" class="section-sixmain">
             <center><h2>Our Projects</h2></center>
             <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-	   <center> <iframe src="https://cdn.lightwidget.com/widgets/f152e168e85e569681b2aae76683d1d3.html" 
+            <center> <iframe src="https://cdn.lightwidget.com/widgets/f152e168e85e569681b2aae76683d1d3.html" 
             scrolling="no" 
             allowtransparency="true" 
             class="lightwidget-widget" 
             style="width:95%;border:0;overflow:hidden; margin: 0 auto;"></center>
-    </iframe>
+        </iframe>
         </div>
 
         <div id="careers" class="section-sevenmain">
@@ -797,16 +1013,16 @@
                 </div>
                 <div class="phone-footer">
                     <img src="phonesymbol.png" alt="Phone Symbol">
-                    <p><a href="tel:+16476540861">(647)-654-0861</a></p>
+                    <p><a href="tel:+7054102104">(705)-410-2104</a></p>
                 </div>
                 <div class="mail-footer">
                     <img src="mail.png" alt="Mail Symbol">
                     <p><a href="mailto:work@muskokaimprovements.com">work@muskokaimprovements.com</a></p>
                 </div>
-		</div>
+            </div>
             <img src="muskokalogo.png" width="400" height="400" alt="Muskoka Logo">
         </div>
-	</div>
+    </div>
     <div id="footer-real-estate" class="footer" style="display: none;">
         <h3 class="real-estate-footer-heading">Interested in Real Estate?</h3>
         <div class="real-estate-footer">
@@ -822,76 +1038,65 @@
 
     <script>
          document.addEventListener('DOMContentLoaded', function() {
-            var hash = window.location.hash.substring(1);
-            if (hash) {
-                showSection(hash);
-            } else {
-                showSection('home');
-            }
+    // Retrieve the last visited section from localStorage
+    var lastVisitedSection = localStorage.getItem('lastSection') || 'home';
+    
+    // Load the saved section or default to 'home'
+    showSection(lastVisitedSection);
 
-            // Intersection Observer for video autoplay
-            const video = document.getElementById('home-video');
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        video.play();
-                    } else {
-                        video.pause();
-                    }
-                });
-            });
-
-            observer.observe(video);
-
-            // Play video if it is already in view when page is refreshed
-            checkVideoInView(video);
-
-            window.addEventListener('scroll', () => {
-                checkVideoInView(video);
-            });
-        });
-
-        function checkVideoInView(video) {
-            const rect = video.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    // Intersection Observer for video autoplay
+    const video = document.getElementById('home-video');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
                 video.play();
             } else {
                 video.pause();
             }
-        }
+        });
+    });
 
-        function navigateTo(targetId) {
-            showSection(targetId);
-            window.location.hash = targetId;
-        }
+    observer.observe(video);
+});
 
-        function showSection(sectionId) {
-            document.querySelectorAll('.section-main, .section-twomain, .section-threemain, .section-fourmain, .section-fivemain, .section-sixmain, .section-sevenmain, .section-eightmain').forEach(section => section.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active');
-            if (sectionId === 'real-estate') {
-                document.getElementById('footer').style.display = 'none';
-                document.getElementById('footer-real-estate').style.display = 'flex';
-            } else {
-                document.getElementById('footer').style.display = 'flex';
-                document.getElementById('footer-real-estate').style.display = 'none';
-            }
-            if (sectionId !== 'contact') {
-                setTimeout(() => {
-                    window.scrollTo({ top: 0, behavior: 'instant' });
-                }, 0); // Slight delay to ensure the section is visible
-            }
-        }
+// Function to navigate between sections and store the section in localStorage
+function navigateTo(targetId) {
+    // Store the last visited section in localStorage
+    localStorage.setItem('lastSection', targetId);
+    showSection(targetId);
+    window.location.hash = targetId;
+}
 
-        function scrollToBottom() {
-            const realEstateFooter = document.getElementById('footer-real-estate');
-            const generalFooter = document.getElementById('footer');
-            
-            if (realEstateFooter.style.display === 'flex') {
-                realEstateFooter.scrollIntoView({ behavior: 'smooth', block: 'end' });
-            } else {
-                generalFooter.scrollIntoView({ behavior: 'smooth', block: 'end' });
-            }
-        }
+// Function to show the section and control footer visibility
+function showSection(sectionId) {
+    document.querySelectorAll('.section-main, .section-twomain, .section-threemain, .section-fourmain, .section-fivemain, .section-sixmain, .section-sevenmain, .section-eightmain').forEach(section => section.classList.remove('active'));
+    document.getElementById(sectionId).classList.add('active');
+
+    // Control footer visibility
+    if (sectionId === 'real-estate') {
+        document.getElementById('footer').style.display = 'none';
+        document.getElementById('footer-real-estate').style.display = 'flex';
+    } else {
+        document.getElementById('footer').style.display = 'flex';
+        document.getElementById('footer-real-estate').style.display = 'none';
+    }
+
+    if (sectionId !== 'contact') {
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'instant' });
+        }, 0); // Slight delay to ensure the section is visible
+    }
+}
+
+// Function to scroll to the bottom of the page
+function scrollToBottom() {
+    const activeSection = document.querySelector('.content .active');
+    if (activeSection) {
+        activeSection.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+}
+
     </script>
 </body>
 </html>
