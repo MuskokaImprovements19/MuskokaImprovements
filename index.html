@@ -1374,10 +1374,16 @@
 function navigateTo(targetId) {
     // Store the last visited section in localStorage
     localStorage.setItem('lastSection', targetId);
-    showSection(targetId);
-    window.location.hash = targetId;
-}
 
+    // If the target is not 'contact', reload the page
+    if (targetId !== 'contact') {
+        window.location.reload(); // Refresh the page
+    } else {
+        // Show the contact section without reloading
+        showSection(targetId);
+        window.location.hash = targetId;
+    }
+}
 // Function to show the section and control footer visibility
 function showSection(sectionId) {
     document.querySelectorAll('.section-main, .section-twomain, .section-threemain, .section-fourmain, .section-fivemain, .section-sixmain, .section-sevenmain, .section-eightmain').forEach(section => section.classList.remove('active'));
@@ -1410,3 +1416,4 @@ function scrollToBottom() {
     </script>
 </body>
 </html>
+
