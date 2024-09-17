@@ -317,8 +317,8 @@
             color: white;
             text-align: center;
             padding: 50px 60px;
-            width: 90vw; /* Ensures fluid width */
-            margin: 0 auto; /* Centers the text */
+            max-width: 100%;
+            margin: 0 auto;
             position: relative;
             top: -40px;
         }
@@ -659,9 +659,16 @@
             .bullet-point-list li {
                 font-size: 12px; 
             }
-	    .left-images-container {
-		margin-right: 75px;
-	  }
+	        .left-images-container {
+		        margin-right: 75px;
+	        }
+
+            /* Revert Founded Text */
+            .founded-text {
+                width: 90vw;
+                margin: 0 auto;
+                max-width: 90vw;
+            }
         }
 
         /* For Phones */
@@ -802,7 +809,7 @@
                 padding: 0 20px;
             }
 	        .expertise-section {
-                margin-left: 5px;
+                margin-left: -10px;
 	        }
 	        
             .founded-text {
@@ -927,7 +934,7 @@
                 padding: 0 20px;
             }
 	        .expertise-section {
-                margin-left: 5px;
+                margin-left: -10px;
 	        }
 
             .founded-text {
@@ -944,8 +951,8 @@
             }
 
             .navbar img {
-                width: 50px;
-                height: 20px;
+                width: 55px;
+                height: 25px;
             }
 
             .real-estate-footer {
