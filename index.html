@@ -470,8 +470,8 @@
             padding: 0px;
             margin: 0;
             flex: 1;
-	    margin-right: 50px;
-	    margin-left: 50px;
+	    margin-right: 5px;
+	    margin-left: 5px;
         }
 
         .bullet-point-list li {
@@ -659,6 +659,17 @@
 	    .left-images-container {
 		margin-right: 75px;
 	  }
+	    .right-images-container {
+		margin-right: -10px;
+		width: 350;
+	 }
+	    .left-images-container {
+           	width: 350px;
+          }
+
+           .left-images-container img, .right-images-container img {
+            	height: 150px;
+         }
         }
 	@media screen and (max-width: 1024px) and (orientation: landscape) {
  	   .pickup-details {
@@ -668,8 +679,8 @@
     		}
 
     	    .bins img, .bottle img {
-       		width: 200px; /* Ensures consistent image size */
-        	height: 200px;
+       		width: 400px; /* Ensures consistent image size */
+        	height: 400px;
     		}
 
     	    .bins p, .bottle p {
