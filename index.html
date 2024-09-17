@@ -659,130 +659,291 @@
             }
         }
 
-        /* For iPhone Screens (Smaller iPhones and larger iPhones) */
-        @media screen and (max-width: 414px) {
-            .header {
-                padding: 60px;
-                text-align: center;
-            }
+/* For Phones */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 80px;
+        text-align: center;
+    }
 
-            .navbar a {
-                padding: 4px;
-                font-size: 6px;
-            }
+    .navbar a {
+        padding: 6px;
+        font-size: 8px;
+    }
 
-            .content {
-                padding: 3px;
-                margin: 3px;
-            }
+    .content {
+        padding: 5px;
+        margin: 5px;
+    }
 
-            .property-management-images img {
-                height: 150px;
-            }
+    .property-management-images img {
+        height: 200px;
+    }
 
-            .property-management-text {
-                margin: 3px;
-                font-size: 14px;
-            }
+    .property-management-text {
+        margin: 5px;
+    }
 
-            .footer-content {
-                gap: 5px;
-            }
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-            .stone-background, .green-background {
-                padding: 40px 0;
-            }
+    .property-management-content {
+        flex-direction: column;
+    }
 
-            .expertise-content {
-                flex-direction: column;
-                gap: 10px;
-            }
+    .stone-background {
+        padding: 30px 0; /* Reduced padding for phone screens */
+    }
 
-            .pickup-details {
-                margin: 5px;
-            }
+    .green-background {
+        padding: 30px 0; /* Reduced padding for phone screens */
+    }
 
-            .footer-text p {
-                font-size: 12px;
-            }
+    .pickup-details {
+        margin: 10px;
+    }
 
-            .property-management-item2 {
-                padding: 10px 0;
-            }
+    .expertise-content {
+        flex-direction: column;
+        gap: 15px;
+        margin-left: 10px;
+    }
 
-            .image-left2 img, .image-right2 img {
-                width: 100%;
-            }
+    /* Center the text in General Contracting and move the kitchen image below */
+    .construction-content {
+        flex-direction: column;
+        text-align: center;
+    }
 
-            .left-paragraph, .right-paragraph {
-                font-size: 14px;
-            }
+    .image-container {
+        text-align: center;
+        transform: none;
+        margin-top: 20px;
+    }
 
-            .section-sevenmain p {
-                font-size: 12px;
-            }
+    .image-container img {
+        width: 80%;
+        margin: 0 auto;
+    }
 
-            .expertise-section h2, .headingconstruction h3, .real-estate-footer-heading {
-                font-size: 16px;
-                text-align: center;
-            }
+    .section-fourmain img {
+        max-width: 100%;
+    }
 
-            .expertise-section p {
-                text-align: center;
-                margin: 0 auto;
-                padding: 0 20px;
-            }
+    .property-management-item2 {
+        flex-direction: column;
+        padding: 20px 0;
+    }
 
-            .founded-text {
-                font-size: 12px;
-                padding: 15px;
-                margin-left: 0;
-                width: 100%;
-                margin-left: 0;
-                margin-right: 0;
-                background-color: black;
-                position: relative;
-                margin-left: calc(-50vw + 50%);
-                max-width: 90vw;
-            }
+    .bullet-container {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-            .navbar img {
-                width: 50px;
-                height: 20px;
-            }
+    .image-left2 img, .image-right2 img {
+        width: 100%;
+        height: auto;
+    }
 
-            .real-estate-footer {
-                padding: 20px;
-                margin-right: 0;
-                margin-bottom: 20px;
-                flex-direction: column;
-                align-items: center;
-                gap: 5px;
-            }
+    .left-paragraph, .right-paragraph {
+        margin: 0;
+        font-size: 14px;
+    }
 
-            .real-estate-footer p {
-                margin-right: 0;
-                text-align: center;
-            }
+    .left-images-container, .right-images-container {
+        width: 100%;
+        margin: 10px;
+    }
 
-            .real-estate-footer img {
-                width: 100px;
-                height: auto;
-            }
+    .bullet-point-list li {
+        font-size: 16px;
+    }
 
-            .image-container img {
-                margin-left: 20px;
-            }
+    .mission-video {
+        margin-top: 20px; /* Added space for the video below the text */
+    }
 
-            .mission-section {
-                flex-direction: column;
-            }
+    .mission-video video {
+        width: 100%;
+    }
 
-            .mission-video {
-                order: 2;
-                margin-top: 20px;
-            }
-        }
+    .footer-text {
+        text-align: center;
+    }
+
+    .section-sevenmain p {
+        font-size: 14px;
+    }
+
+    .expertise-section h2, .headingconstruction h3, .real-estate-footer-heading {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .expertise-section p {
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .founded-text {
+        font-size: 14px;
+        padding: 20px;
+        margin-left: 0;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: black;
+        position: relative;
+        margin-left: calc(-50vw + 50%);
+        max-width: 90vw;
+    }
+
+    .navbar img {
+        width: 60px;
+        height: 20px;
+    }
+
+    .real-estate-footer {
+        padding: 20px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .real-estate-footer p {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .image-container img {
+        margin-left: 20px;
+    }
+
+    .real-estate-footer img {
+        width: 150px;
+        height: auto;
+    }
+}
+
+/* For Very Small Phones */
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 60px;
+        text-align: center;
+    }
+
+    .navbar a {
+        padding: 4px;
+        font-size: 6px;
+    }
+
+    .content {
+        padding: 3px;
+        margin: 3px;
+    }
+
+    .property-management-images img {
+        height: 150px;
+    }
+
+    .property-management-text {
+        margin: 3px;
+        font-size: 14px;
+    }
+
+    .footer-content {
+        gap: 5px;
+    }
+
+    .stone-background {
+        padding: 20px 0; /* Further reduced padding for very small phone screens */
+    }
+
+    .green-background {
+        padding: 20px 0; /* Further reduced padding for very small phone screens */
+    }
+
+    .pickup-details {
+        margin: 5px;
+    }
+
+    .footer-text p {
+        font-size: 12px;
+    }
+
+    .property-management-item2 {
+        padding: 10px 0;
+    }
+
+    .image-left2 img, .image-right2 img {
+        width: 100%;
+    }
+
+    .left-paragraph, .right-paragraph {
+        font-size: 14px;
+    }
+
+    .section-sevenmain p {
+        font-size: 12px;
+    }
+
+    .expertise-section h2, .headingconstruction h3, .real-estate-footer-heading {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .expertise-section p {
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .founded-text {
+        font-size: 12px;
+        padding: 15px;
+        margin-left: 0;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: black;
+        position: relative;
+        margin-left: calc(-50vw + 50%);
+        max-width: 90vw;
+    }
+
+    .navbar img {
+        width: 50px;
+        height: 20px;
+    }
+
+    .real-estate-footer {
+        padding: 20px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .real-estate-footer p {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .real-estate-footer img {
+        width: 100px;
+        height: auto;
+    }
+
+    .image-container img {
+        margin-left: 20px;
+    }
+}
     </style>
 </head>
 <body>
