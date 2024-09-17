@@ -671,11 +671,20 @@
             }
         }
 	@media screen and (max-width: 1024px) and (orientation: landscape) {
- 	   .bins img, .bottle img {
-    	   	 width: 200px; /* Ensures the same width as in vertical mode */
-    	    	height: 200px; /* Ensures the same height */
-  	  }
-	}
+ 	   .pickup-details {
+        width: 70%; /* Same width as in portrait */
+        padding: 10px;
+        margin: 20px auto; /* Keep it centered */
+    }
+
+    .bins img, .bottle img {
+        width: 200px; /* Ensures consistent image size */
+        height: 200px;
+    }
+
+    .bins p, .bottle p {
+        font-size: 16px; /* Adjust text size if needed */
+    }
         /* For Phones */
         @media screen and (max-width: 768px) {
             .header {
