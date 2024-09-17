@@ -695,10 +695,12 @@
 
     .stone-background {
         padding: 30px 0; /* Reduced padding for phone screens */
+        margin-top: 50px; /* Adds space to push the background below the navbar */
     }
 
     .green-background {
         padding: 30px 0; /* Reduced padding for phone screens */
+        margin-top: 50px; /* Adds space to push the background below the navbar */
     }
 
     .pickup-details {
@@ -761,8 +763,15 @@
         font-size: 16px;
     }
 
+    /* Move video below Our Mission text and above Our Expertise for phone screens */
+    .mission-section {
+        flex-direction: column;
+    }
+
     .mission-video {
-        margin-top: 20px; /* Added space for the video below the text */
+        margin-top: 20px;
+        order: 2; /* Move video below the Our Mission text */
+        width: 100%;
     }
 
     .mission-video video {
@@ -862,10 +871,12 @@
 
     .stone-background {
         padding: 20px 0; /* Further reduced padding for very small phone screens */
+        margin-top: 50px; /* Adds space to push the background below the navbar */
     }
 
     .green-background {
         padding: 20px 0; /* Further reduced padding for very small phone screens */
+        margin-top: 50px; /* Adds space to push the background below the navbar */
     }
 
     .pickup-details {
