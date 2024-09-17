@@ -1328,11 +1328,20 @@
         </div>
     </div>
 
-    <script>
-         document.addEventListener('DOMContentLoaded', function() {
+  <script>
+// Function to ensure page starts at the top after reload
+window.onbeforeunload = function() {
+    window.scrollTo(0, 0); // This forces the page to the top when reloading
+};
+
+document.addEventListener('DOMContentLoaded', function() {
     // Retrieve the last visited section from localStorage
     var lastVisitedSection = localStorage.getItem('lastSection') || 'home';
-    
+
+    // Immediately set the page to the top without scrolling
+    window.scrollTo(0, 0); // Force the page to start at the top
+    setTimeout(() => { window.scrollTo(0, 0); }, 1); // Ensure top scroll after a slight delay
+
     // Load the saved section or default to 'home'
     showSection(lastVisitedSection);
 
@@ -1362,6 +1371,11 @@
 
     observer.observe(video);
 
+    // Ensure the page is scrolled to the top after it loads completely
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+    });
+
     // Check if video is already in view on page load
     if (video.getBoundingClientRect().top < window.innerHeight && !videoWasPaused) {
         video.play();
@@ -1373,15 +1387,10 @@ function navigateTo(targetId) {
     // Store the last visited section in localStorage
     localStorage.setItem('lastSection', targetId);
 
-    // If the target is not 'contact', reload the page
-    if (targetId !== 'contact') {
-        window.location.reload(); // Refresh the page
-    } else {
-        // Show the contact section without reloading
-        showSection(targetId);
-        window.location.hash = targetId;
-    }
+    // Force the page to reload and go to the top
+    window.location.reload();  // Reload the page
 }
+
 // Function to show the section and control footer visibility
 function showSection(sectionId) {
     document.querySelectorAll('.section-main, .section-twomain, .section-threemain, .section-fourmain, .section-fivemain, .section-sixmain, .section-sevenmain, .section-eightmain').forEach(section => section.classList.remove('active'));
@@ -1396,11 +1405,8 @@ function showSection(sectionId) {
         document.getElementById('footer-real-estate').style.display = 'none';
     }
 
-    if (sectionId !== 'contact') {
-        setTimeout(() => {
-            window.scrollTo({ top: 0, behavior: 'instant' });
-        }, 0); // Slight delay to ensure the section is visible
-    }
+    // Scroll to the top immediately after showing the section
+    window.scrollTo(0, 0);
 }
 
 // Function to scroll to the bottom of the page
@@ -1411,7 +1417,7 @@ function scrollToBottom() {
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
 }
-    </script>
+</script>
 </body>
 </html>
 
