@@ -465,13 +465,13 @@
         }
 
         .bullet-point-list {
-            text-align: left;
+            text-align: center;
             list-style: none;
-            padding: 20px;
+            padding: 0px;
             margin: 0;
             flex: 1;
-            margin-left: -10px;
-	    margin-right: 20px;
+	    margin-right: 50px;
+	    margin-left: 50px;
         }
 
         .bullet-point-list li {
@@ -486,9 +486,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 5px;
             width: 450px;
-            margin-right: 125px;
-            margin-left: 55px;
-        }
+          }
 
         .right-images-container {
             display: grid;
@@ -497,8 +495,6 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 5px;
             width: 450px;
-            margin-right: 55px;
-            margin-left: 125px;
         }
 
         .left-images-container img, .right-images-container img {
@@ -666,19 +662,20 @@
         }
 	@media screen and (max-width: 1024px) and (orientation: landscape) {
  	   .pickup-details {
-        width: 100%; /* Same width as in portrait */
-        padding: 10px;
-        margin: 20px auto; /* Keep it centered */
-    }
+        	width: 100%; /* Same width as in portrait */
+        	padding: 10px;
+       		margin: 20px auto; /* Keep it centered */
+    		}
 
-    .bins img, .bottle img {
-        width: 200px; /* Ensures consistent image size */
-        height: 200px;
-    }
+    	    .bins img, .bottle img {
+       		width: 200px; /* Ensures consistent image size */
+        	height: 200px;
+    		}
 
-    .bins p, .bottle p {
-        font-size: 16px; /* Adjust text size if needed */
-    }
+    	    .bins p, .bottle p {
+           	 font-size: 16px; /* Adjust text size if needed */
+    	 	}
+	}
         /* For Phones */
         @media screen and (max-width: 768px) {
             .header {
