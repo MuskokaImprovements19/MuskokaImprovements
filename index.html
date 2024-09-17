@@ -565,128 +565,185 @@
             height: 400px;
         }
 
-        /* Responsive Media Queries */
+        /* For Tablets (iPads) Portrait */
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+    .header {
+        padding: 100px;
+    }
 
-        /* For Tablets (iPads) */
-        @media screen and (max-width: 1024px) {
-            .header {
-                padding: 100px;
-            }
+    .navbar a {
+        padding: 8px;
+        font-size: 14px;
+    }
 
-            .navbar a {
-                padding: 8px;
-                font-size: 14px;
-            }
+    .content {
+        padding: 10px;
+        margin: 10px;
+    }
 
-            .content {
-                padding: 10px;
-                margin: 10px;
-            }
+    .expertise-content {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-            .expertise-content {
-                flex-direction: column;
-                gap: 20px;
-            }
+    .property-management-images img {
+        height: auto;
+    }
 
-            .property-management-images img {
-                height: auto;
-            }
+    .property-management-text {
+        margin: 10px;
+    }
 
-            .property-management-text {
-                margin: 10px;
-            }
+    .footer-content {
+        flex-direction: column;
+    }
 
-            .footer-content {
-                flex-direction: column;
-            }
+    .property-management-content {
+        flex-direction: column;
+    }
 
-            .property-management-content {
-                flex-direction: column;
-            }
+    .stone-background, .green-background {
+        padding: 100px 0;
+    }
 
-            .stone-background, .green-background {
-                padding: 100px 0;
-            }
+    .pickup-details {
+        margin: 20px;
+    }
 
-            .pickup-details {
-                margin: 20px;
-            }
+    .mission-text h2, .expertise-section h2, .headingconstruction h3 {
+        font-size: 22px;
+    }
 
-            .mission-text h2, .expertise-section h2, .headingconstruction h3 {
-                font-size: 22px;
-            }
+    .section-fourmain img {
+        max-width: 70%;
+    }
 
-            .section-fourmain img {
-                max-width: 70%;
-            }
+    .left-paragraph, .right-paragraph {
+        font-size: 16px;
+    }
 
-            .left-paragraph, .right-paragraph {
-                font-size: 16px;
-            }
+    .centered-content {
+        flex-direction: column;
+    }
 
-            .centered-content {
-                flex-direction: column;
-            }
+    .navbar img {
+        width: 120px;
+        height: 80px;
+    }
 
-            .navbar img {
-                width: 120px;
-                height: 80px;
-            }
+    .expertise-content > div {
+        margin: 10px 0;
+        padding: 10px;
+    }
 
-            .expertise-content > div {
-                margin: 10px 0;
-                padding: 10px;
-            }
+    .construction-content img {
+        max-width: 100%;
+        height: auto;
+    }
 
-            .construction-content img {
-                max-width: 100%;
-                height: auto;
-            }
+    .highlighted-paragraph {
+        padding: 10px;
+    }
 
-            .highlighted-paragraph {
-                padding: 10px;
-            }
+    .expertise-content img {
+        width: 100%;
+        height: auto;
+    }
+}
 
-            .expertise-content img {
-                width: 100%;
-                height: auto;
-            }
+/* For Tablets (iPads) Landscape */
+@media screen and (max-width: 1366px) and (orientation: landscape) {
+    .header {
+        padding: 150px;
+    }
 
-            /* Adjust bullet-point text size to avoid alignment issues */
-            .bullet-point-list li {
-                font-size: 12px; 
-            }
-	    .left-images-container {
-		margin-right: 75px;
-	  }
-	    .right-images-container {
-		margin-right: -10px;
-		width: 350;
-	 }
-	    .left-images-container {
-           	width: 350px;
-          }
+    .navbar a {
+        padding: 12px;
+        font-size: 16px;
+    }
 
-           .left-images-container img, .right-images-container img {
-            	height: 150px;
-         }
-        }
-	@media screen and (max-width: 1024px) and (orientation: landscape) {
- 	   .pickup-details {
-        	width: 100%; /* Same width as in portrait */
-        	padding: 10px;
-       		margin: 20px auto; /* Keep it centered */
-    		}
+    .content {
+        padding: 15px;
+        margin: 15px;
+    }
 
-    	    .bins img, .bottle img {
-       		width: 400px; /* Ensures consistent image size */
-        	height: 400px;
-    		}
+    .expertise-content {
+        flex-direction: row; /* Keep this horizontal in landscape mode */
+        gap: 30px;
+    }
 
-    	    .bins p, .bottle p {
-           	 font-size: 16px; /* Adjust text size if needed */
-    	 	}
-	}
+    .property-management-images img {
+        height: auto;
+    }
+
+    .property-management-text {
+        margin: 15px;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .property-management-content {
+        flex-direction: row;
+    }
+
+    .stone-background, .green-background {
+        padding: 120px 0;
+    }
+
+    .pickup-details {
+        margin: 30px;
+        width: 80%; /* Make it a bit wider in landscape */
+    }
+
+    .mission-text h2, .expertise-section h2, .headingconstruction h3 {
+        font-size: 24px;
+    }
+
+    .section-fourmain img {
+        max-width: 80%;
+    }
+
+    .left-paragraph, .right-paragraph {
+        font-size: 18px;
+    }
+
+    .centered-content {
+        flex-direction: row;
+    }
+
+    .navbar img {
+        width: 150px;
+        height: 100px;
+    }
+
+    .expertise-content > div {
+        margin: 15px 0;
+        padding: 15px;
+    }
+
+    .construction-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .highlighted-paragraph {
+        padding: 15px;
+    }
+
+    .expertise-content img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Adjust bullet-point text size to avoid alignment issues */
+    .bullet-point-list li {
+        font-size: 14px; 
+    }
+}
+
         /* For Phones */
         @media screen and (max-width: 768px) {
             .header {
@@ -838,7 +895,7 @@
                 background-color: black;
                 position: relative;
                 margin-left: calc(-50vw + 50%);
-                max-width: 100vw;
+                max-width: 105vw;
             }
 
             .navbar img {
@@ -963,7 +1020,7 @@
                 background-color: black;
                 position: relative;
                 margin-left: calc(-50vw + 50%);
-                max-width: 100vw;
+                max-width: 105vw;
             }
 
             .navbar img {
