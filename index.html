@@ -953,17 +953,17 @@
                 height: auto;
             }
 	    .left-images-container {
-            	padding: 10px;
-            	width: 300px;
+            	padding: 5px;
+            	width: 200px;
           }
 
            .right-images-container {
-            	padding: 10px;
-            	width: 300px;
+            	padding: 5px;
+            	width: 200px;
         }
 
            .left-images-container img, .right-images-container img {
-            	height: 175px;
+            	height: 100px;
    	 }
         }
 
@@ -1126,7 +1126,7 @@
                     </div>
                 </div>
                 <div class="mission-video">
-                    <video id="home-video" width="500" height="300" controls>
+                    <video id="home-video" width="500" height="300" controls muted>
                         <source src="Norms.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -1378,6 +1378,11 @@
     });
 
     observer.observe(video);
+
+    // Check if video is already in view on page load
+    if (video.getBoundingClientRect().top < window.innerHeight && !videoWasPaused) {
+        video.play();
+    }
 });
 
 // Function to navigate between sections and store the section in localStorage
