@@ -20,5 +20,5 @@ export default defineConfig(({ mode }) => ({
     dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"],
   },
   // This is the important line for GitHub Pages
-  base: "/MuskokaImprovements/",
+  base: "/",
 }));
