@@ -25,6 +25,8 @@ jobs:
           VITE_SUPABASE_PUBLISHABLE_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVkNJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJveHlhcXF3cW5vY2R0ZnlhaWp6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI1MDI1MDAsImV4cCI6MjA1ODA3ODUwMH0.UIEPRMaejPBGcrBBoGxSjVPSFJ7PH7pT9bQ3MBwb_QE"
           VITE_SUPABASE_PROJECT_ID: "boxyaqqwqnocdtfyaijz"
         run: bun run build
+      - name: Copy index.html to 404.html for SPA routing
+        run: cp dist/index.html dist/404.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
