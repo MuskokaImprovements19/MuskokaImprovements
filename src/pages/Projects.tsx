@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import { useEffect, useRef } from "react";
 import Layout from "@/components/Layout";
 
 const InstagramIcon = ({ className = "h-5 w-5" }: { className?: string }) => (
@@ -7,6 +8,19 @@ const InstagramIcon = ({ className = "h-5 w-5" }: { className?: string }) => (
 );
 
 const Projects = () => {
+  const widgetRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Load the LightWidget script dynamically
+    const existingScript = document.querySelector('script[src="https://cdn.lightwidget.com/widgets/lightwidget.js"]');
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.src = "https://cdn.lightwidget.com/widgets/lightwidget.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <Layout>
       <section className="section-padding pt-16 pb-12 max-w-7xl mx-auto">
@@ -28,11 +42,11 @@ const Projects = () => {
         </motion.a>
       </section>
 
-      <section className="section-padding pb-20 max-w-7xl mx-auto">
+      <section className="section-padding pb-20 max-w-7xl mx-auto" ref={widgetRef}>
         <iframe
           src="https://lightwidget.com/widgets/f152e168e85e569681b2aae76683d1d3.html"
-          className="w-full border-0 overflow-hidden"
-          style={{ minHeight: "600px" }}
+          className="lightwidget-widget w-full border-0 overflow-hidden"
+          style={{ width: "100%", border: "0", overflow: "hidden" }}
           scrolling="no"
           allowTransparency
           title="Instagram feed from @muskokaimprovements"
