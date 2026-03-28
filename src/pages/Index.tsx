@@ -25,15 +25,15 @@ const Index = () => (
       </div>
       <div className="relative z-10 text-center section-padding max-w-4xl mx-auto">
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }} className="text-primary font-semibold tracking-[0.3em] uppercase text-sm mb-4">
-          By Invitation & Application Only
+          Muskoka's Premier Property Experts
         </motion.p>
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="font-serif text-5xl md:text-7xl font-bold text-foreground leading-tight mb-6">
           Exclusive Care
           <br />
-          <span className="text-gradient">For Muskoka's Elite</span>
+          <span className="text-gradient">For Muskoka's Finest</span>
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-          We selectively partner with discerning homeowners who demand nothing less than perfection. Premium property management, bespoke renovations, and white-glove service across Bracebridge, Port Carling, Gravenhurst, and all of Muskoka.
+          We partner with homeowners who demand nothing less than perfection. Premium property management, bespoke renovations, and white-glove service across Bracebridge, Port Carling, Gravenhurst, and all of Muskoka.
         </motion.p>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-md hover:bg-primary/90 transition-colors text-sm uppercase tracking-wide">
@@ -109,7 +109,7 @@ const Index = () => (
       </div>
       <div className="relative z-10 text-center section-padding max-w-3xl mx-auto">
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-          Is Your Property <span className="text-gradient">Worthy?</span>
+          Ready To Elevate <span className="text-gradient">Your Property?</span>
         </h2>
         <p className="text-muted-foreground text-lg mb-8">
           We partner with a select few who share our commitment to excellence. Tell us about your property and vision — and why Muskoka Improvements is the right fit for you.
