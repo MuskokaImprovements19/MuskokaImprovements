@@ -9,6 +9,7 @@ import dockFlowers from "@/assets/photos/dock-flowers.png";
 import deckFirepit from "@/assets/photos/deck-firepit.jpg";
 import aerialEstate from "@/assets/photos/aerial-estate.jpg";
 import cedarStairs from "@/assets/photos/cedar-stairs.jpg";
+import winterCottages from "@/assets/photos/winter-cottages.jpg";
 
 // Centralized image URLs - real project photos
 export const IMAGES = {
@@ -23,5 +24,5 @@ export const IMAGES = {
   landscape: garbageBin,
   winter: bathroom,
   garbageLakeside: garbageBinLakeside,
-  winterCottages: cottageAerial,
+  winterCottages: winterCottages,
 };
