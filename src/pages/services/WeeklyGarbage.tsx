@@ -81,9 +81,13 @@ const WeeklyGarbage = () => {
   return (
     <Layout>
       <PageSEO
-        title="Weekly Garbage & Recycling Pickup | Island Cottages on Lake Muskoka"
-        description="Weekly garbage and recycling pickup service for island cottages on Lake Muskoka. Reliable waste collection for seasonal and year-round properties."
-        canonical="/weekly-garbage"
+        title="Island Garbage & Recycling Pickup | Lake Muskoka, Rosseau & Joseph"
+        description="Weekly garbage and recycling pickup for island and water-access cottages on Lake Muskoka, Lake Rosseau, and Lake Joseph. We come to your dock by boat — no trip to the marina needed."
+        canonical
+        <meta property="og:title" content="Island Garbage & Recycling Pickup | Muskoka Islands | Muskoka Improvements" />
+        <meta property="og:description" content="Weekly boat pickup for island cottages on Lake Muskoka, Rosseau & Joseph. We collect from your dock — no marina trips needed. May–October." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://muskokaimprovements.ca/mlogo.png" />="/weekly-garbage"
       />
       {/* Hero */}
       <section className="relative h-[50vh] md:h-[60vh] flex items-end overflow-hidden">
@@ -91,9 +95,9 @@ const WeeklyGarbage = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
         <div className="relative z-10 section-padding pb-12 max-w-7xl mx-auto w-full">
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-2">Island Cottage Service</motion.p>
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="font-serif text-4xl md:text-6xl font-bold text-foreground">Weekly Garbage & Recycling</motion.h1>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="font-serif text-4xl md:text-6xl font-bold text-foreground">Island Garbage & Recycling Pickup</motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-lg text-muted-foreground mt-3 max-w-2xl">
-            Reliable weekly pickup for island cottagers on Lake Muskoka — May through October. <strong className="text-foreground">$1,260 + HST for the season.</strong>
+            Reliable weekly pickup for island and water-access cottagers on Lake Muskoka, Lake Rosseau, and Lake Joseph — May through October. <strong className="text-foreground">$1,260 + HST for the season.</strong>
           </motion.p>
         </div>
       </section>
