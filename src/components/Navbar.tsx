@@ -54,15 +54,17 @@ const Navbar = () => {
           >
             Contact
           </Link>
-          <a
-            href="https://portal.muskokaimprovements.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium tracking-wide uppercase transition-colors hover:text-primary text-muted-foreground ml-auto"
-          >
-            Client Portal
-          </a>
         </div>
+
+        {/* Client Portal - far right */}
+        <a
+          href="https://portal.muskokaimprovements.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden lg:block text-sm font-medium tracking-wide uppercase text-primary hover:text-primary/80 transition-colors"
+        >
+          Client Portal
+        </a>
 
         {/* Mobile Toggle */}
         <button
