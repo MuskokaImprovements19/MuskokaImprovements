@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import PageSEO from "@/components/PageSEO";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -22,6 +23,11 @@ const Contact = () => {
 
   return (
     <Layout>
+      <PageSEO
+        title="Contact Muskoka Improvements | Free Quote"
+        description="Get a free quote for property management, cottage renovations, deck & dock building in Muskoka. Call 705-703-0070 or fill out our contact form."
+        canonical="/contact"
+      />
       {/* Hero */}
       <section className="section-padding pt-16 pb-12 max-w-7xl mx-auto">
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-3">Get In Touch</motion.p>

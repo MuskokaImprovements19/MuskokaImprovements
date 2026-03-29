@@ -1,8 +1,15 @@
 import ServicePage from "@/components/ServicePage";
 import { IMAGES } from "@/lib/images";
+import PageSEO from "@/components/PageSEO";
 
 const DockBuilding = () => (
-  <ServicePage
+    <>
+      <PageSEO
+        title="Dock Building in Muskoka | Custom Waterfront Docks"
+        description="Custom dock building and installation in Bracebridge, Port Carling, Gravenhurst and Muskoka. Floating docks, permanent docks, and boathouses built to last."
+        canonical="/services/dock-building"
+      />
+      <ServicePage
     title="Dock Building"
     subtitle="Premium Waterfront Docks & Boathouses"
     heroImage={IMAGES.dock}
@@ -13,7 +20,8 @@ const DockBuilding = () => (
     ]}
     features={["Floating & permanent docks", "Crib dock construction", "Boathouse builds & repairs", "Boat lifts & accessories", "Shoreline restoration", "Permit coordination"]}
     gallery={[IMAGES.dock, IMAGES.boathouse, IMAGES.lakefront]}
-  />
-);
+      />
+    </>
+  );
 
 export default DockBuilding;

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Hammer, TreePine, Ship, Home } from "lucide-react";
 import Layout from "@/components/Layout";
 import { IMAGES } from "@/lib/images";
+import PageSEO from "@/components/PageSEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -17,6 +18,11 @@ const services = [
 
 const Index = () => (
   <Layout>
+      <PageSEO
+        title="Muskoka Property Management, Renovations & Contracting"
+        description="Premium cottage property management, deck & dock building, and renovations in Bracebridge, Port Carling, Gravenhurst and all of Muskoka. Locally owned since 2019."
+        canonical="/"
+      />
     {/* Hero */}
     <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
@@ -104,7 +110,7 @@ const Index = () => (
     {/* CTA Banner */}
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0">
-        <img src={IMAGES.deck} alt="" className="w-full h-full object-cover" />
+        <img src={IMAGES.deck} alt="Muskoka waterfront deck and dock project" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-background/85" />
       </div>
       <div className="relative z-10 text-center section-padding max-w-3xl mx-auto">

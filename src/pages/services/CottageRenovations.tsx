@@ -1,8 +1,15 @@
 import ServicePage from "@/components/ServicePage";
 import { IMAGES } from "@/lib/images";
+import PageSEO from "@/components/PageSEO";
 
 const CottageRenovations = () => (
-  <ServicePage
+    <>
+      <PageSEO
+        title="Cottage Renovations in Muskoka | Kitchen, Bathroom & Full Remodels"
+        description="Expert cottage renovation services in Bracebridge, Port Carling, Gravenhurst and Muskoka. Kitchens, bathrooms, additions and full remodels with local craftsmanship."
+        canonical="/services/cottage-renovations"
+      />
+      <ServicePage
     title="Cottage Renovations"
     subtitle="Transform Your Cottage Into a Modern Retreat"
     heroImage={IMAGES.kitchen}
@@ -13,7 +20,8 @@ const CottageRenovations = () => (
     ]}
     features={["Kitchen & bathroom remodels", "Open-concept conversions", "Flooring & finishing", "Windows & insulation upgrades", "Structural repairs & reinforcement", "Custom cabinetry & built-ins"]}
     gallery={[IMAGES.kitchen, IMAGES.cottage, IMAGES.construction]}
-  />
-);
+      />
+    </>
+  );
 
 export default CottageRenovations;

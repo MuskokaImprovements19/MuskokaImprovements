@@ -1,8 +1,15 @@
 import ServicePage from "@/components/ServicePage";
 import { IMAGES } from "@/lib/images";
+import PageSEO from "@/components/PageSEO";
 
 const DeckBuilding = () => (
-  <ServicePage
+    <>
+      <PageSEO
+        title="Deck Building in Muskoka | Custom Waterfront Decks"
+        description="Custom deck building and construction in Bracebridge, Port Carling, Gravenhurst and Muskoka. Waterfront decks, composite decking, and outdoor living spaces."
+        canonical="/services/deck-building"
+      />
+      <ServicePage
     title="Deck Building"
     subtitle="Custom Decks Built for Muskoka Living"
     heroImage={IMAGES.deck}
@@ -13,7 +20,8 @@ const DeckBuilding = () => (
     ]}
     features={["Custom design & layout", "Premium composite & natural wood", "Multi-level & wraparound decks", "Built-in seating & planters", "Railing & stair systems", "Staining & weatherproofing"]}
     gallery={[IMAGES.deck, IMAGES.cottage, IMAGES.lakefront]}
-  />
-);
+      />
+    </>
+  );
 
 export default DeckBuilding;

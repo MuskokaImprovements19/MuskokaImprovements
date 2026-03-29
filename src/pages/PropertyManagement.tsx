@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Shield, TreePine, Snowflake, Droplets, Leaf, Wrench } from "lucide-react";
 import Layout from "@/components/Layout";
 import { IMAGES } from "@/lib/images";
+import PageSEO from "@/components/PageSEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -20,6 +21,11 @@ const services = [
 
 const PropertyManagement = () => (
   <Layout>
+      <PageSEO
+        title="Property Management in Muskoka | Cottage Care & Maintenance"
+        description="Year-round cottage property management in Bracebridge, Port Carling, Gravenhurst and Muskoka. Opening, closing, maintenance, cleaning and security checks."
+        canonical="/property-management"
+      />
     <section className="relative h-[50vh] md:h-[60vh] flex items-end overflow-hidden">
       <img src={IMAGES.lakefront} alt="Muskoka property management" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />

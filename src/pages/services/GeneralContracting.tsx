@@ -1,8 +1,15 @@
 import ServicePage from "@/components/ServicePage";
 import { IMAGES } from "@/lib/images";
+import PageSEO from "@/components/PageSEO";
 
 const GeneralContracting = () => (
-  <ServicePage
+    <>
+      <PageSEO
+        title="General Contracting in Muskoka | Residential & Commercial"
+        description="Reliable general contracting services in Bracebridge, Port Carling, Gravenhurst and Muskoka. New builds, additions, structural work and project management."
+        canonical="/services/general-contracting"
+      />
+      <ServicePage
     title="General Contracting"
     subtitle="Full-Service Construction Across Muskoka"
     heroImage={IMAGES.boathouse}
@@ -13,7 +20,8 @@ const GeneralContracting = () => (
     ]}
     features={["New builds & custom homes", "Boathouses & waterfront structures", "Foundations & framing", "Interior & exterior finishing", "Project management & planning", "Permit acquisition & compliance"]}
     gallery={[IMAGES.boathouse, IMAGES.construction, IMAGES.cottage, IMAGES.deck]}
-  />
-);
+      />
+    </>
+  );
 
 export default GeneralContracting;

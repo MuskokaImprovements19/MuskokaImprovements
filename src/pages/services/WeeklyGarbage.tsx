@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import PageSEO from "@/components/PageSEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -79,6 +80,11 @@ const WeeklyGarbage = () => {
 
   return (
     <Layout>
+      <PageSEO
+        title="Weekly Garbage & Recycling Pickup | Island Cottages on Lake Muskoka"
+        description="Weekly garbage and recycling pickup service for island cottages on Lake Muskoka. Reliable waste collection for seasonal and year-round properties."
+        canonical="/weekly-garbage"
+      />
       {/* Hero */}
       <section className="relative h-[50vh] md:h-[60vh] flex items-end overflow-hidden">
         <img src={IMAGES.garbageLakeside} alt="Weekly Garbage & Recycling Pickup" className="absolute inset-0 w-full h-full object-cover" />
