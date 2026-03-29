@@ -20,7 +20,6 @@ const Navbar = () => {
             alt="Muskoka Improvements"
             className="h-10"
           />
-          
         </Link>
 
         {/* Desktop Nav */}
@@ -31,7 +30,6 @@ const Navbar = () => {
           >
             Home
           </Link>
-
           <Link
             to="/property-management"
             className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-primary ${isActive("/property-management") ? "text-primary" : "text-muted-foreground"}`}
@@ -56,6 +54,14 @@ const Navbar = () => {
           >
             Contact
           </Link>
+          <a
+            href="https://www.portal.muskokaimprovements.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-semibold tracking-wide uppercase px-6 py-2.5 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+          >
+            Portal
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -82,6 +88,7 @@ const Navbar = () => {
               <Link to="/weekly-garbage" onClick={() => setMobileOpen(false)} className="text-sm font-medium uppercase text-foreground hover:text-primary">Weekly Garbage</Link>
               <Link to="/projects" onClick={() => setMobileOpen(false)} className="text-sm font-medium uppercase text-foreground hover:text-primary">Projects</Link>
               <Link to="/contact" onClick={() => setMobileOpen(false)} className="text-sm font-semibold uppercase px-6 py-2.5 bg-primary text-primary-foreground rounded-md text-center hover:bg-primary/90">Contact</Link>
+              <a href="https://www.portal.muskokaimprovements.com" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className="text-sm font-semibold uppercase px-6 py-2.5 bg-primary text-primary-foreground rounded-md text-center hover:bg-primary/90">Portal</a>
             </div>
           </motion.div>
         )}
