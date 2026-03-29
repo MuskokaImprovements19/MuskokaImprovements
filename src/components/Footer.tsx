@@ -54,7 +54,7 @@ const Footer = () => (
           </a>
           <div className="mt-6">
             <a
-              href="https://www.portal.muskokaimprovements.com"
+              href="https://portal.muskokaimprovements.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-sm font-semibold tracking-wide uppercase px-6 py-2.5 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
