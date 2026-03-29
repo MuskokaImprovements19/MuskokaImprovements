@@ -33,7 +33,7 @@ const Contact = () => {
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-3">Get In Touch</motion.p>
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-4">Contact Us</motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-lg text-muted-foreground max-w-2xl">
-          Ready to start your project or need property management? Reach out — we'd love to hear from you.
+          Ready to start your project or need property management? Reach out â we'd love to hear from you.
         </motion.p>
       </section>
 
@@ -76,7 +76,7 @@ const Contact = () => {
               </div>
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">Message *</label>
-                <Textarea required placeholder="Tell us about your project..." rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} className="bg-background border-border" />
+                <Textarea required placeholder="Tell us about your property and needs..." rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} className="bg-background border-border" />
               </div>
               <Button type="submit" className="w-full py-6 text-sm uppercase tracking-wide font-semibold">
                 <Send className="h-4 w-4 mr-2" /> Request Client Membership
@@ -121,7 +121,7 @@ const Contact = () => {
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 Interested in joining the Muskoka Improvements team? We're always looking for skilled, motivated individuals. Send us your resume!
               </p>
-              <a href="mailto:Work@Muskokaimprovements.com?subject=Career%20Inquiry" className="text-primary text-sm font-semibold hover:underline">Apply Now →</a>
+              <a href="mailto:Work@Muskokaimprovements.com?subject=Career%20Inquiry" className="text-primary text-sm font-semibold hover:underline">Apply Now â</a>
             </div>
           </motion.div>
         </div>
