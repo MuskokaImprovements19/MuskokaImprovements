@@ -14,6 +14,7 @@ import CottageRenovations from "./pages/services/CottageRenovations";
 import WeeklyGarbage from "./pages/services/WeeklyGarbage";
 import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
     <TooltipProvider>
       <Sonner />
       <BrowserRouter basename={basename}>
+		<ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/general-contracting" element={<GeneralContracting />} />
