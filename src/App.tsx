@@ -26,11 +26,10 @@ const App = () => (
       <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/services/general-contracting" element={<GeneralContracting />} />
-          <Route path="/services/deck-building" element={<DeckBuilding />} />
-          <Route path="/services/dock-building" element={<DockBuilding />} />
-          <Route path="/services/cottage-renovations" element={<CottageRenovations />} />
-          <Route path="/services/weekly-garbage" element={<WeeklyGarbage />} />
+          <Route path="/general-contracting" element={<GeneralContracting />} />
+          <Route path="/deck-building" element={<DeckBuilding />} />
+          <Route path="/dock-building" element={<DockBuilding />} />
+          <Route path="/cottage-renovations" element={<CottageRenovations />} />
           <Route path="/weekly-garbage" element={<WeeklyGarbage />} />
           <Route path="/property-management" element={<PropertyManagement />} />
           <Route path="/projects" element={<Projects />} />
